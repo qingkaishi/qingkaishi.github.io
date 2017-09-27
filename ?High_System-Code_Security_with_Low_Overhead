@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>High System-Code Security with Low Overhead | Qingkai Shi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+	
+	<h1>High System-Code Security with Low Overhead</h1>
+    <div id="content">
+<p><strong>Intro</strong>: These checks might verify that array indices are in
+bounds, that arithmetic operations do not overflow, or that data structure
+invariants hold. If a sanity check fails, it typically is unrecoverable, and the
+program is aborted, because undefined behavior may affect security. Other than
+that, sanity checks do not affect the program state.</p>
+
+<p><strong>Issue</strong>: These checks are performed at runtime, and thus
+overhead is the problem.</p>
+
+<p><strong>Idea</strong>: Developers/ope­rators can specify what level of
+overhead they find acceptable for a given workload. It is often possible to
+obtain high security at low overhead, for two reasons: First, the checks that
+are most important for security are checks guarding obscure, untested, buggy
+code where protection is most needed. Because this code is typically cold, the
+checks are rarely executed and do not contribute much to the overhead. Second,
+most of the induced overhead comes from only few expensive checks located inside
+hot loops. These checks are executed over and over again, burning cycles while
+likely not adding much to the program's security.</p>
+
+<p><strong>Related Work</strong>:</p>
+
+<ol style="list-style-type:lower-alpha">
+	<li>Data Execution Prevention</li>
+</ol>
+
+<p>A widely deployed sanity check supported by hardware is Data Execution
+Prevention (DEP). In a DEP-protected system, a process’s data pages are
+marked non-executable in the system page table.</p>
+
+<ol style="list-style-type:lower-alpha" start="2">
+	<li>Assertions</li>
+</ol>
+
+<p>Developer-provided assertions are the most common type of sanity check in
+code. C. A. R. Hoare reported in 2002 that over 250,000 assertions are present
+in Microsoft Office.</p>
+
+<ol style="list-style-type:lower-alpha" start="3">
+	<li>Undefined Behavior Checks</li>
+</ol>
+
+<p>UndefinedBeha­viorSanitizer (UBSan) instruments a program with checks that
+ensure the absence of various operations that are undefined in the C/C++
+language standards, and thus generally unsafe to use. UBSan catches NULL pointer
+dereferences, unaligned memory accesses, signed integer overflows, out of bound
+bit shifts, etc.</p>
+
+<ol style="list-style-type:lower-alpha" start="4">
+	<li>Stack Canaries</li>
+</ol>
+
+<p>Another widely used application security mechanism are stack canaries and the
+related Structured Exception Handler Override Protection (SEHOP). Stack canaries
+detect when function return addresses have been overwritten. Compiler-inserted
+code in the function prologue inserts a secret value just before the function
+return address on the program stack. Before returning, the function verifies
+that the secret value is still in place. Buffer overflows overwriting the return
+address will very likely modify the secret value and are thus detected before
+the attacker gains control.</p>
+
+<ol style="list-style-type:lower-alpha" start="5">
+	<li>Memory Safety Checks</li>
+</ol>
+
+<p>The available tools instrument a target program such that they insert code
+before each memory access to check whether the address is valid. The strictness
+of this definition of “valid” influences the provided safety guarantees and
+the performance overhead.</p>
+
+<p><strong>Res</strong>: <a
+href="http://www.qingkaishi.com/pdfs/High System-Code Security with Low Overhead.pdf">paper</a></p>
+
+<!-- by Texy2! -->      </div>
+    </div>
+    <div id="sidebar">
+    <p id="title"><a href="./">Qingkai Shi<br><font size=4>The Hong Kong Univ. of Sci. & Tech.</font></a></p>
+
+<ul class="sidebar-list">
+  <li class="edit-link"><a href="./?edit=High_System-Code_Security_with_Low_Overhead">Edit page</a></li>
+  <li class="edit-link"><a href="./fileupload.php", target="blank">Upload files</a></li>
+  <li class="backlinks"><a href="./?backlinks=High_System-Code_Security_with_Low_Overhead">Backlinks</a></li>
+  <li class="modified">Last modified: <em>27.09.2017, 16:42:31</em></li>
+  <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
+  <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li>
+</ul>
+
+    </div>
+	<div id="footer">
+Copyright 2017 Qingkai Shi. <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255345623'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1255345623%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+  </div>
+</body>
+</html>
