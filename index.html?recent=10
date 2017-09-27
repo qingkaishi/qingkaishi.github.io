@@ -12,7 +12,7 @@
 	<h1>10 Most Recent Changes</h1>
     <div id="content">
 <ul>
-	<li><a href="?Introduction">Introduction</a> (27.09.2017, 18:05:37)</li>
+	<li><a href="?Introduction">Introduction</a> (27.09.2017, 19:20:52)</li>
 
 	<li><a href="?Publications">Publications</a> (27.09.2017, 17:54:14)</li>
 
@@ -29,7 +29,7 @@
   <li class="edit-link"><a href="./?edit=Introduction">Edit page</a></li>
   <li class="edit-link"><a href="./fileupload.php", target="blank">Upload files</a></li>
   <li class="backlinks"><a href="./?backlinks=Introduction">Backlinks</a></li>
-  <li class="modified">Last modified: <em>27.09.2017, 18:05:37</em></li>
+  <li class="modified">Last modified: <em>27.09.2017, 19:20:52</em></li>
   <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
   <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li>
 </ul>
