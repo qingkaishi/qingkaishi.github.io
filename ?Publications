@@ -11,10 +11,12 @@
 	
 	<h1>Publications</h1>
     <div id="content">
-<h2 id="toc-cve">CVE</h2>
+<h2 id="toc-cve-ids">CVE IDs</h2>
 
 <ol>
 	<li>CVE-2017–14739: null pointer dereference in imagemagick.</li>
+
+	<li>CVE-2017–14952: double free in International Components for Unicode.</li>
 </ol>
 
 <h2 id="toc-papers">Papers</h2>
@@ -69,7 +71,7 @@
   <li class="edit-link"><a href="./?edit=Publications">Edit page</a></li>
   <li class="edit-link"><a href="./fileupload.php", target="blank">Upload files</a></li>
   <li class="backlinks"><a href="./?backlinks=Publications">Backlinks</a></li>
-  <li class="modified">Last modified: <em>27.09.2017, 17:54:14</em></li>
+  <li class="modified">Last modified: <em>02.10.2017, 10:46:11</em></li>
   <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
   <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li>
 </ul>
@@ -78,7 +80,7 @@
 	<h3>Contents</h3>
 
 	<ul>
-		<li><a href="#toc-cve">CVE</a></li>
+		<li><a href="#toc-cve-ids">CVE IDs</a></li>
 
 		<li><a href="#toc-papers">Papers</a></li>
 
