@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>10 Most Recent Changes | WikWiki</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+    
+    <h1>10 Most Recent Changes</h1>
+    <div id="content">
+<ul>
+	<li><a href="?PLDI_2018_Artifact_Evaluation_of_Pinpoint">PLDI 2018 Artifact
+	Evaluation of Pinpoint</a> (05.07.2018, 16:59:40)</li>
+
+	<li><a href="?Bug_Report_Format">Bug Report Format</a> (25.02.2018,
+	11:54:26)</li>
+</ul>
+
+<!-- by Texy2! -->      </div>
+    </div>
+    <div id="sidebar">
+    <p id="title"><a href="./">WikWiki</a></p>
+
+<ul class="sidebar-list">
+  <li class="edit-link"><a href="./?edit=PLDI_2018_Artifact_Evaluation_of_Pinpoint">Edit page</a></li>
+  <li class="backlinks"><a href="./?backlinks=PLDI_2018_Artifact_Evaluation_of_Pinpoint">Backlinks</a></li>
+  <li class="modified">Last modified: <em>05.07.2018, 16:59:40</em></li>
+  <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
+  <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li>
+</ul>
+
+    </div>
+    <div id="footer">
+    Powered by <a href="https://github.com/smasty/WikWiki">WikWiki</a>.
+    </div>
+  </div>
+</body>
+</html>

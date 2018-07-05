@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bug Report Format | WikWiki</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+    
+    <h1>Bug Report Format</h1>
+    <div id="content">
+<pre> Pinpoint缺陷报告JSON格式 报告的总体结构为一个单一的­对象。开始有一些报告的元信息，接着是按照缺陷类型­分类的报告列表。字段解释如下：{ TotalBugs: T, // T为本报告的总缺陷数 SrcFiles: <a
+href="?edit=//_一个数组，记录了所有涉及所报告缺陷的源代码文件_//_用数组记录相当于把每个文件映射到了一个整数代码0,_1,_2,_......_//_后续报告中就可以用这个整数来代表源代码文件"
+class="new"
+title="Create page '// 一个数组，记录了所有涉及所报告缺陷的源代码文件
+// 用数组记录相当于把每个文件映射到了一个整数代码0, 1, 2, ......
+// 后续报告中就可以用这个整数来代表源代码文件'">// 一个数组，记录了所有涉及所­报告缺陷的源代码文件 // 用数组记录相当于把每个文件­映射到了一个整数代码0, 1, 2, ...... // 后续报告中就可以用这个整数­来代表源代码文件</a>,<br
+/>BugTypes: <a
+href="?edit=//_按缺陷类型分类的缺陷报告数组_{_//_每一个缺陷类型是一个对象，其中_Name:_XXX,_//_缺陷的名字是XXX_Description:_YYY,_//_对该缺陷额外的描述YYY_TotalReports:_N,_//_该缺陷总的报告数_Reports:_[_{_ReportChecker:_XXX,_//_产生报告的检查器_Score:_M,_//_对该bug可能性的自动化评分_DiagSteps:_[_//_触发该缺陷的关键步骤列表，最核心的数据_//_每一个步骤是一个对象，字段说明如下_{_SrcFile:_ID_//_该步骤所涉及到的源代码文件整数代码(ID)_SrcLine:_l_//_该步骤所涉及的具体源代码行号l_desc:_XXX_//_具体对该步骤的描述XXX_},_…_//_更多步骤"
+class="new"
+title="Create page '// 按缺陷类型分类的缺陷报告数组
+{
+// 每一个缺陷类型是一个对象，其中
+Name: XXX,                              // 缺陷的名字是XXX
+Description: YYY,               // 对该缺陷额外的描述YYY
+TotalReports: N,                // 该缺陷总的报告数
+Reports: [
+{
+ReportChecker: XXX,                             // 产生报告的检查器
+Score: M,                                                       // 对该bug可能性的自动化评分DiagSteps: [
+// 触发该缺陷的关键步骤列表，最核心的数据
+// 每一个步骤是一个对象，字段说明如下
+{
+SrcFile: ID                     // 该步骤所涉及到的源代码文件整数代码(ID)
+SrcLine: l                              // 该步骤所涉及的具体源代码行号l
+desc:    XXX                    // 具体对该步骤的描述XXX
+},
+…                                                     // 更多步骤'">// 按缺陷类型分类的缺陷报告数组 { // 每一个缺陷类型是一个对象，其中 Name: XXX, // 缺陷的名字是XXX Description: YYY, // 对该缺陷额外的描述YYY TotalReports: N, // 该缺陷总的报告数 Reports: [ { ReportChecker: XXX, // 产生报告的检查器 Score: M, // 对该bug可能性的自动化评分<br
+/>DiagSteps: [ // 触发该缺陷的关键步骤列表，最核心的数据 // 每一个步骤是一个对象，字段说明如下 { SrcFile: ID // 该步骤所涉及到的源代码文件­整数代码(ID) SrcLine: l // 该步骤所涉及的具体源代码行号l desc: XXX // 具体对该步骤的描述XXX }, … // 更多步骤</a>, }, … // 更多报告 }, ] }</pre>
+
+<!-- by Texy2! -->      </div>
+    </div>
+    <div id="sidebar">
+    <p id="title"><a href="./">WikWiki</a></p>
+
+<ul class="sidebar-list">
+  <li class="edit-link"><a href="./?edit=Bug_Report_Format">Edit page</a></li>
+  <li class="backlinks"><a href="./?backlinks=Bug_Report_Format">Backlinks</a></li>
+  <li class="modified">Last modified: <em>25.02.2018, 11:54:26</em></li>
+  <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
+  <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li>
+</ul>
+
+    </div>
+    <div id="footer">
+    Powered by <a href="https://github.com/smasty/WikWiki">WikWiki</a>.
+    </div>
+  </div>
+</body>
+</html>
