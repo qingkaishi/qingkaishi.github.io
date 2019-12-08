@@ -49,64 +49,10 @@
 
 		<li>Programming Language</li>
 
-		<li>Software Testing</li>
+		<li>Fuzzing and Testing</li>
 
 		<li>Concurrency</li>
 	</ul>
-
-	<h2 id="toc-advisories">Advisories</h2>
-
-	<ol style="text-align:justify; text-justify:inter-ideograph; margin-right: 5mm">
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14739">CVE-2017–14739</a>:
-		ImageMagick 7.0.7–4 mishandles failed memory allocation, which allows remote
-		attackers to cause a denial of service.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14952">CVE-2017–14952</a>:
-		International Components for Unicode (ICU) for C/C++ through 59.1 contains a
-		double free that allows remote attackers to execute arbitrary code.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15096">CVE-2017–15096</a>:
-		GlusterFS in versions prior to 3.10 contains a null pointer dereference that
-		may cause denial of service.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16892">CVE-2017–16892</a>:
-		Bftpd 4.6 contains a memory leak which occurs if a mal-crafted sequence of FTP
-		requests are received.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000445">CVE-2017–1000445</a>:
-		ImageMagick 7.0.7–1 and older version are vulnerable to null pointer
-		dereference in the MagickCore component and might lead to denial of
-		service.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20786">CVE-2018–20786</a>:
-		libvterm through 0+bzr726, as used in Vim and other products, mishandles certain
-		out-of-memory conditions, leading to a denial of service (application crash),
-		related to screen.c, etc.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13238">CVE-2019–13238</a>:
-		In Bento4 1.5.1.0, a memory allocation failure is unhandled in
-		Core/Ap4SdpAtom.cpp and leads to crashes.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13959">CVE-2019–13959</a>:
-		In Bento4 1.5.1–627, AP4 DataBuffer::Set­DataSize does not handle
-		reallocation fail- ures, leading to a memory copy into a NULL pointer.</li>
-
-		<li><a
-		href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-13960">CVE-2019–13960</a>:
-		In libjpeg-turbo 2.0.2, a large amount of memory can be used during processing
-		of an invalid progressive JPEG image containing incorrect width and height
-		values in the image header.</li>
-	</ol>
-
-	<p>Thanks to the <a href="/#toc-projects">Pinpoint project</a>.</p>
 
 	<h2 id="toc-publications">Publications</h2>
 
@@ -116,8 +62,8 @@
 		Path-Sensitive Memory Leak Detection for Millions of Lines of Code</a></u>. In
 		<a href="https://conf.researchr.org/home/icse-2019"><strong>ICSE
 		2019</strong></a>: the 41st ACM/IEEE International Conference on Software
-		Engineering. Montreal, QC, Canada. May 2019. (<strong>ACM SIGSOFT Distinguished
-		Paper Award</strong>)</li>
+		Engineering. Montreal, QC, Canada. May 2019. <strong style="color:red">ACM
+		SIGSOFT Distinguished Paper Award</strong></li>
 
 		<li><strong>Qingkai Shi</strong>, Xiao Xiao, Rongxin Wu, Jinguo Zhou, Gang Fan,
 		Charles Zhang. <u><a href="/public_pdfs/PLDI2018.pdf">Pinpoint: Fast and Precise
@@ -154,10 +100,10 @@
 			is an industrial-strength next-generation automated bug finding tool through
 			static analysis and AI. It is built on top of <a
 			href="http://llvm.org">LLVM</a>. It has found <a
-			href="https://whichbug.github.io/">more than 50 vulnerabilities</a> in about a
-			dozen of open-source projects, including Apache, MySQL, Firefox, Python,
-			OpenSSL, etc. Some of them have been assigned <a href="/#toc-advisories">CVE
-			IDs</a>. This project is being commercialized at <a
+			href="https://whichbug.github.io/">about a hundred vulnerabilities</a> in many
+			mature open-source projects, including Apache, MySQL, Firefox, Python, OpenSSL,
+			etc. Some of the detected vulnerabilities have been assigned <a
+			href="/?Advisories">CVE IDs</a>. This project is being commercialized at <a
 			href="http://www.sourcebrella.com">Sourcebrella Inc.</a>. For more information,
 			interested readers can refer to our technical papers: &lt;<a
 			href="/public_pdfs/PLDI2018.pdf">PLDI 2018</a>&gt; &lt;<a
@@ -238,7 +184,7 @@
   <li class="edit-link"><a href="./?edit=Introduction">Edit page</a></li>
   <li class="edit-link"><a href="./fileupload.php", target="blank">Upload files</a></li>
   <li class="backlinks"><a href="./?backlinks=Introduction">Backlinks</a></li>
-  <li class="modified">Last modified: <em>16.10.2019, 13:52:00</em></li>
+  <li class="modified">Last modified: <em>07.12.2019, 19:33:53</em></li>
   <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
   <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li>
 </ul>
@@ -248,8 +194,6 @@
 
 	<ul>
 		<li><a href="#toc-research-interests">Research Interests</a></li>
-
-		<li><a href="#toc-advisories">Advisories</a></li>
 
 		<li><a href="#toc-publications">Publications</a></li>
 
