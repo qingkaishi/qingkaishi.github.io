@@ -1,7 +1,7 @@
 body{margin:0;padding:0;font:.8em/1.6 Verdana, Arial, sans-serif;text-align:center}
 #container{margin:1em auto;text-align:left;width:980px}
 
-a{color:#09f;text-decoration:underline}
+a{color:#09f;text-decoration:none}#underline}
 a:hover{color:#059;text-decoration:none}
 a.new{color:#c00}
 a.new:hover{color:#900}
