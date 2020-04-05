@@ -5,6 +5,44 @@
 <title>Homepage | Introduction | Qingkai Shi</title>
 <meta name="keywords" content="Qingkai Shi, QingkaiShi, Program Analysis and Testing">
 <link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+var browser = {
+   versions: function() {
+   var u = navigator.userAgent,
+   ua = navigator.userAgent.toLowerCase();
+   return { //移动终端浏览器版本信息
+       trident: u.indexOf('Trident') > -1, //IE内核
+       presto: u.indexOf('Presto') > -1, //opera内核
+       webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+       gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+       mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+       ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+       android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+       iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+       iPad: u.indexOf('iPad') > -1, //是否iPad
+       webApp: u.indexOf('Safari') == -1 ,//是否web应该程序，没有头部与底部
+       wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
+       weibo:ua.match(/WeiBo/i) == "weibo",//微博
+       qq:ua.match(/QQ/i) == "qq"//qq
+   };
+   }(),
+   language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+function testmobile() {
+   if (browser.versions.mobile) {
+   var bar = document.getElementById('sidebar');
+   bar.style.display = 'none';
+
+   var main = document.getElementById('main');
+   main.style.width = '100%';
+   main.style.border = '0px';
+   }
+};
+
+</script>
+
 </head>
 <body>
   <div id="container">
@@ -211,8 +249,8 @@
 
 <!-- by Texy2! -->      </div>
     </div>
-    <div id="sidebar">
-    <p id="title"><a href="./">Qingkai Shi<br><font size=4>The Hong Kong Univ. of Sci. & Tech.</font></a></p>
+        <div id="sidebar">
+             <p id="title"><a href="./">Qingkai Shi<br><font size=4>The Hong Kong Univ. of Sci. & Tech.</font></a></p>
 
 <ul class="sidebar-list">
   <li class="edit-link"><a href="./?edit=Introduction">Edit page</a></li>
@@ -240,9 +278,10 @@
 	</ul>
 </div>
 
-    </div>
+        </div>
+        <style onload="testmobile()"></style>
         <div id="footer">
-            Copyright 2020 Qingkai Shi. Last modified: 05.04.2020, 20:24:14.
+             Copyright 2020 Qingkai Shi. Last modified: 05.04.2020, 20:24:14.
         </div>
   </div>
   <div style="width: 200px; margin: auto; display: none">
