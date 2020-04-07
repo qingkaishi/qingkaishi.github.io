@@ -38,6 +38,9 @@ function testmobile() {
    var main = document.getElementById('main');
    main.style.width = '99%';
    main.style.border = '0px';
+
+   var info = document.getElementById('info');
+   info.style.clear = 'both';
    }
 };
 
@@ -67,15 +70,17 @@ function testmobile() {
 	<div><br />
 </div>
 
-	<hr />
+	<div id="info">
+		<hr />
 
-	<p>Department of Computer Science and Engineering</p>
+		<p>Department of Computer Science and Engineering</p>
 
-	<p>Hong Kong University of Science and Technology</p>
+		<p>Hong Kong University of Science and Technology</p>
 
-	<p>Email: qingkaishi AT gmail DOT com, qshiaa AT cse DOT ust DOT hk</p>
+		<p>Email: qingkaishi AT gmail DOT com, qshiaa AT cse DOT ust DOT hk</p>
 
-	<hr />
+		<hr />
+	</div>
 
 	<div><br />
 </div>
@@ -276,7 +281,7 @@ function testmobile() {
         </div>
         <style onload="testmobile()"></style>
         <div id="footer">
-             Copyright 2020 Qingkai Shi. Last modified: 06.04.2020, 23:45:26.
+             Copyright 2020 Qingkai Shi. Last modified: 07.04.2020, 19:45:57.
         </div>
   </div>
   <div style="width: 200px; margin: auto; display: none">
