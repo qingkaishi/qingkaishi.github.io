@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Homepage | Introduction | Qingkai Shi</title>
 <meta name="keywords" content="Qingkai Shi, QingkaiShi, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript">
 
@@ -32,17 +33,24 @@ var browser = {
 
 function testmobile() {
    if (browser.versions.mobile) {
-   var bar = document.getElementById('sidebar');
-   bar.style.display = 'none';
+      var bar = document.getElementById('sidebar');
+      bar.style.display = 'none';
 
-   var main = document.getElementById('main');
-   main.style.width = '99%';
-   main.style.border = '0px';
+      var main = document.getElementById('main');
+      main.style.width = '99%';
+      main.style.border = '0px';
 
-   var info = document.getElementById('info');
-   info.style.clear = 'both';
+      var info = document.getElementById('info');
+      info.style.clear = 'both';
+
+      var container = document.getElementById('container');
+      container.style.width = '99%'
+
+      var sig = document.getElementById('sig');
+      sig.style.display = 'none';
    }
 };
+
 
 </script>
 
@@ -57,9 +65,9 @@ function testmobile() {
 	<div style="width:170px;float:left" class="figure"><img src="images/sqk.jpg"
 	alt="" width="160" height="214" /></div>
 
-	<div style="width:170px;float:right;margin-right: 90px;margin-top: 3px"
-	class="figure"><img src="images/name.gif" alt="" width="180" height="60"
-	/></div>
+	<div id="sig" style="width:170px;float:right;margin-right: 90px;margin-top: 3px"
+	class="figure"><img id="sig" src="images/name.gif" alt="" width="180"
+	height="60" /></div>
 
 	<p
 	style="text-align:justify; text-justify:inter-ideograph; margin-right: 5mm;"><strong>Qingkai
@@ -281,7 +289,7 @@ function testmobile() {
         </div>
         <style onload="testmobile()"></style>
         <div id="footer">
-             Copyright 2020 Qingkai Shi. Last modified: 07.04.2020, 20:38:42.
+             Copyright 2020 Qingkai Shi. Last modified: 08.04.2020, 00:03:09.
         </div>
   </div>
   <div style="width: 200px; margin: auto; display: none">

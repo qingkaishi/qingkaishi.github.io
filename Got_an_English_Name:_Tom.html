@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Homepage | Got an English Name: Tom | Qingkai Shi</title>
 <meta name="keywords" content="Qingkai Shi, QingkaiShi, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript">
 
@@ -32,17 +33,24 @@ var browser = {
 
 function testmobile() {
    if (browser.versions.mobile) {
-   var bar = document.getElementById('sidebar');
-   bar.style.display = 'none';
+      var bar = document.getElementById('sidebar');
+      bar.style.display = 'none';
 
-   var main = document.getElementById('main');
-   main.style.width = '99%';
-   main.style.border = '0px';
+      var main = document.getElementById('main');
+      main.style.width = '99%';
+      main.style.border = '0px';
 
-   var info = document.getElementById('info');
-   info.style.clear = 'both';
+      var info = document.getElementById('info');
+      info.style.clear = 'both';
+
+      var container = document.getElementById('container');
+      container.style.width = '99%'
+
+      var sig = document.getElementById('sig');
+      sig.style.display = 'none';
    }
 };
+
 
 </script>
 
