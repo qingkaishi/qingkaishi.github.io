@@ -33,9 +33,6 @@ var browser = {
 
 function testmobile() {
    if (browser.versions.mobile) {
-      var bar = document.getElementById('sidebar');
-      bar.style.display = 'none';
-
       var main = document.getElementById('main');
       main.style.width = '99%';
       main.style.border = '0px';
@@ -267,47 +264,12 @@ Security 2014.</p>
 
 <!-- by Texy2! -->      </div>
     </div>
-        <div id="sidebar">
-             <p id="title"><a href="./">Qingkai Shi<br><font size=4>The Hong Kong Univ. of Sci. & Tech.</font></a></p>
-
-<ul class="sidebar-list">
-  <li class="edit-link"><a href="./?edit=Reading_(Security)">Edit page</a></li>
-  <li class="edit-link"><a href="./fileupload.php", target="blank">Upload files</a></li>
-  <!-- <li class="backlinks"><a href="./?backlinks=Reading_(Security)">Backlinks</a></li> -->
-  <li class="create-new-link"><a href="./?edit=">Create new page</a></li>
-  <!-- <li class="recent-changes-link"><a href="./?recent=10">Recent changes</a></li> -->
-</ul>
-
-<div id="toc">
-	<h3>Contents</h3>
-
-	<ul>
-		<li><a href="#toc-the-security-of-mobile-os">The Security of Mobile OS</a></li>
-
-		<li><a href="#toc-sanity-checks">Sanity Checks</a></li>
-
-		<li><a href="#toc-code-reuse-attacks-code-diversification">Code Reuse Attacks
-		&amp; Code Diversification</a></li>
-
-		<li><a href="#toc-obliviousness">Obliviousness</a></li>
-
-		<li><a href="#toc-timing-channels">Timing Channels</a></li>
-
-		<li><a href="#toc-typical-security-vulnerability">Typical Security
-		Vulnerability</a></li>
-
-		<li><a href="#toc-memory-image-forensics">Memory Image Forensics</a></li>
-
-		<li><a href="#toc-domain-specific-language">Domain Specific Language</a></li>
-
-		<li><a href="#toc-others">Others</a></li>
-	</ul>
-</div>
-
-        </div>
         <style onload="testmobile()"></style>
         <div id="footer">
-             Copyright 2020 Qingkai Shi. Last modified: 16.10.2019, 13:52:00.
+             Copyright 2020 Qingkai Shi. Last modified: 16.10.2019, 13:52:00. <br>
+             <a href="./?edit=Reading_(Security)">Edit page</a> | 
+             <a href="./fileupload.php", target="blank">Upload files</a> | 
+             <a href="./?edit=">Create new page</a>
         </div>
   </div>
   <div style="width: 200px; margin: auto; display: none">
