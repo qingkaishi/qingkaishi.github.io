@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage | Reading (Security) | Qingkai Shi</title>
+<meta name="keywords" content="Qingkai Shi, QingkaiShi, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+var browser = {
+   versions: function() {
+   var u = navigator.userAgent,
+   ua = navigator.userAgent.toLowerCase();
+   return { //移动终端浏览器版本信息
+       trident: u.indexOf('Trident') > -1, //IE内核
+       presto: u.indexOf('Presto') > -1, //opera内核
+       webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+       gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+       mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+       ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+       android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+       iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+       iPad: u.indexOf('iPad') > -1, //是否iPad
+       webApp: u.indexOf('Safari') == -1 ,//是否web应该程序，没有头部与底部
+       wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
+       weibo:ua.match(/WeiBo/i) == "weibo",//微博
+       qq:ua.match(/QQ/i) == "qq"//qq
+   };
+   }(),
+   language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+function testmobile() {
+   if (browser.versions.mobile) {
+      var info = document.getElementById('info');
+      info.style.clear = 'both';
+
+      var container = document.getElementById('container');
+      container.style.width = '100%';
+
+      var sig = document.getElementById('sig');
+      sig.style.display = 'none';
+   }
+};
+
+
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+	
+        <h1>Reading (Security)</h1>
+    <div id="content">
+<h2 id="toc-the-security-of-mobile-os">The Security of Mobile OS</h2>
+
+<p>1. Landon P. Cox, et al., <a
+href="/?SpanDex_Secure_Password_Tracking_for_Android">SpanDex: Secure Password
+Tracking for Android</a>. In USENIX Security 2014.</p>
+
+<p><em>Key words</em>: implicit flow, symbolic execution.</p>
+
+<p>2. Q. A. Chen, et al., <a
+href="/?Peeking_into_Your_App_without_Actually_Seeing_It">Peeking into Your App
+without Actually Seeing It: UI State Inference and Novel Android Attacks</a>. In
+USENIX Security 2014.</p>
+
+<p><em>Key words</em>: UI state inference attacks.</p>
+
+<p>3. X. Jin, et al., <a
+href="/pdfs/Code Injection Attacks on HTML5-based Mobile Apps Characterization, Detection and Mitigation.pdf">Code
+Injection Attacks on HTML5-based Mobile Apps Characterization, Detection and
+Mitigation</a>. In ACM CCS 2014.</p>
+
+<p><em>Key words</em>: XSS attacks, code injection.</p>
+
+<p>4. T. Wang, et al., <a
+href="/pdfs/On the Feasibility of Large-Scale Infections of iOS Devices.pdf">On
+the Feasibility of Large-Scale Infections of iOS Devices</a>. In USENIX
+Security 2014.</p>
+
+<p><em>Key words</em>: Man in the middle attack.</p>
+
+<p>5. T. Wang, et al. <a href="#">JekyII on iOS: When Benign Apps Become
+Evil</a>. USENIX Security 2013.</p>
+
+<p><em>Key words</em>: ROP in iOS.</p>
+
+<h2 id="toc-sanity-checks">Sanity Checks</h2>
+
+<p>1. Jonas Wagner, et al., <a
+href="/?High_System-Code_Security_with_Low_Overhead">High System-Code Security
+with Low Overhead</a>. In IEEE S&amp;P 2015.</p>
+
+<p><em>Key words</em>: sanity checks.</p>
+
+<p>2. M. Abadi, et al., <a
+href="/pdfs/Control-flow Integrity: Principles, Implementations and Applications..pdf">Control-flow
+Integrity: Principles, Implementations and Applications</a>. In ACM
+TISS 2009.</p>
+
+<p><em>Key words</em>: control-flow integrity.</p>
+
+<h2 id="toc-code-reuse-attacks-code-diversification">Code Reuse Attacks &amp;
+Code Diversification</h2>
+
+<p>1. J. Seibert, et al., <a
+href="/pdfs/Information Leaks Without Memory Disclosures Remote Side Channel Attacks on Diversified Code.pdf">Information
+Leaks Without Memory Disclosures: Remote Side Channel Attacks on Diversified
+Code</a>. In ACM CCS 2014.</p>
+
+<p><em>Key words</em>: code reuse attacks, code diversification.</p>
+
+<p>2. J. Dahse, et al., <a
+href="/pdfs/Code Reuse Attacks in PHP Automated POP Chain Generation.pdf">Code
+Reuse Attacks in PHP Automated POP Chain Generation</a>. In ACM CCS 2014.</p>
+
+<p><em>Key words</em>: code reuse attacks, PHP object injection.</p>
+
+<p>3. C. Giurida, et al., <a
+href="/pdfs/Enhanced Operating System Security through Efficient and Fine-grained Address Space Randomization.pdf">Enhanced
+Operating System Security through Efficient and Fine-grained Address Space
+Randomization</a>. In USENIX Security 2012.</p>
+
+<p><em>Key words</em>: address space randomization (ASR), os-level vs. app-level
+ASR (brute force attacks usually cannot work in OS-level).</p>
+
+<p>4. H. Shacham et al., <a
+href="/pdfs/On the effectiveness of address-space randomization.pdf">On the
+Effectiveness of Address-Space Randomization</a>. In ACM CCS 2004.</p>
+
+<p><em>Key words</em>: ASR, brute force attacks.</p>
+
+<p>5. R. Roemer, et al., <a
+href="/pdfs/Return-Oriented Programming Systems, Languages, Applications.pdf">Return-oriented
+Programming: Systems, Languages and Applications</a>. In ACM TISS 2012.</p>
+
+<p><em>Key words</em>: return-oriented programming.</p>
+
+<p>6. C. Cowan et al., <a
+href="/pdfs/FormatGuard Automatic Protection From printf Format String Vulnerabilities.pdf">FormatGuard:
+Automatic Protection from printf Format String Vulnerabilities</a>. In USENIX
+Security 2001.</p>
+
+<p><em>Key words</em>: format string attacks and defences.</p>
+
+<p>7. C. Cowan et al., <a
+href="/pdfs/PointGuard - Protecting Pointers From Buffer Overflow Vulnerabilities.pdf">PointGuard:
+Protecting Pointers from Buffer Overflow Vulnerabilities</a>. In USENIX
+Security 2003.</p>
+
+<p><em>Key words</em>: Pointer encryption, buffer overflow vulnerabilities.</p>
+
+<p>8. N. Carlini et al., <a
+href="/pdfs/ROP is Still Dangerous Breaking Modern Defenses.pdf">ROP is Still
+Dangerous Breaking Modern Defenses</a>. In USENIX Security 2014.</p>
+
+<p><em>Key words</em>: defeating (1) call-preceded ROP defences (2) long gadget
+sequences defences (3) history inspection defenses.</p>
+
+<h2 id="toc-obliviousness">Obliviousness</h2>
+
+<p>1. X. Wang, et al., <a href="/pdfs/Oblivious Data Structures.pdf">Oblivious
+Data Structures</a>. In ACM CCS 2014.</p>
+
+<p><em>Key words</em>: oblivious data structures &amp; algorithms, access
+pattern leakage.</p>
+
+<p>2. C. Liu, et al., <a
+href="/pdfs/Memory Trace Oblivious Program Execution.pdf">Memory Trace Oblivious
+Program Execution</a>. In CSF 2013.</p>
+
+<p><em>Key words</em>: memory trace obliviousness.</p>
+
+<h2 id="toc-timing-channels">Timing Channels</h2>
+
+<p>1. D. Zhang, et al., <a
+href="/pdfs/Language-based Control and Mitigation of Timing Channels.pdf">Language-based
+Control and Mitigation of Timing Channels</a>. In ACM PLDI 2012.</p>
+
+<h2 id="toc-typical-security-vulnerability">Typical Security Vulnerability</h2>
+
+<p>1. <a
+href="http://butnotyet.tumblr.com/post/175132533/the-story-of-a-simple-and-dangerous-kernel-bug">The
+story of a simple and dangerous kernel bug</a>. <a
+href="/pdfs/The Story of a Simple and Dangerous Kernel Bug.pdf">Local
+Version</a>.</p>
+
+<p><em>Key words</em>: unchecked deref.</p>
+
+<p>2. <a
+href="http://isec.pl/vulnerabilities/isec-0026-vmsplice_to_kernel.txt">Linux
+vmsplice vulnerabilities</a>. <a
+href="/pdfs/Linux vmsplice vulnerabilities.pdf">Local Version</a>.</p>
+
+<p><em>Key words</em>: unchecked deref.</p>
+
+<p>3. <a
+href="http://www.securityfocus.com/archive/1/462728/30/0/threaded">OpenBSD's IPv6
+mbufs remote kernel buffer overflow</a>. <a
+href="/pdfs/OpenBSD's IPv6 mbufs remote kernel buffer overflow.pdf">Local
+Version</a>.</p>
+
+<p><em>Key words</em>: stack buffer overflow.</p>
+
+<p>4. <a
+href="http://wenku.baidu.com/link?url=7DfcHXTZY04VcmO-qwF0MHbJCidRPUsL6-4_oaukI8H2aeG3-5pFaCNp6dPiwMyhkS4Xp_iGfwqqYji09jiwt0RfpLNP5zSbIXJBErXtFGy">Heap
+Overflow Attacks</a>. <a href="/pdfs/Heap_overflow.pdf">Local Version</a>.</p>
+
+<p><em>Key words</em>: heap buffer overflow.</p>
+
+<h2 id="toc-memory-image-forensics">Memory Image Forensics</h2>
+
+<p>1. Brendan Saltaformaggio et al., DSCRETE: Automatic Rendering of Forensic
+Information from Memory Images via Application Logic Reuse. In SEUNIX
+Security 2014.</p>
+
+<p><em>Key word</em>: scanner identification.</p>
+
+<p>2. M. Carbone, et al., Mapping kernel objects to enable systematic integrity
+checking. In ACM CCS 2009.</p>
+
+<p><em>Key word</em>: structure-invariant-based &amp; signature-based brute
+force scanning.</p>
+
+<p>3. B. Dolan-Gavitt, et al., Robust signatures for kernel data structures. In
+ACM CCS 2009.</p>
+
+<p><em>Key word</em>: value-invariant-based &amp; signature-based brute force
+scanning.</p>
+
+<p>4. R. Walls, et al., Forensic triage for mobile phones with dec0de. In
+USENIX Security 2011.</p>
+
+<p><em>Key word</em>: value-invariant-based &amp; signature-based brute force
+scanning.</p>
+
+<p>5. D. Kirat, et al., <a
+href="/pdfs/BareCloud Bare-metal Analysis-based Evasive Malware Detection.pdf">BareCloud
+Bare-metal Analysis-based Evasive Malware Detection</a>. In USENIX
+Security 2014.</p>
+
+<p><em>Key word</em>: behavior comparison.</p>
+
+<h2 id="toc-domain-specific-language">Domain Specific Language</h2>
+
+<p>1. A. Johnsoon, et al., Exploring and Enforcing Security Guarantees via
+Program Dependence Graphs. In PLDI 2015.</p>
+
+<h2 id="toc-others">Others</h2>
+
+<p>1. F. Peng, et al., <a
+href="/pdfs/X-Force - Force-Executing Binary Programs for Security Applications.pdf">X-Force:
+Force-Executing Binary Programs for Security Applications</a>. In USENIX
+Security 2014.</p>
+
+<p><em>Key word</em>: forcing execution of arbitrary branches.</p>
+
+<!-- by Texy2! -->      </div>
+    </div>
+        <style onload="testmobile()"></style>
+        <div id="footer">
+             Copyright 2020 Qingkai Shi. Last modified: 16.10.2019, 13:52:00. <br>
+             <a href="./?edit=Reading_(Security)">Edit page</a> | 
+             <a href="./fileupload.php", target="blank">Upload files</a> | 
+             <a href="./?edit=">Create new page</a> <br><br>
+             <a href='https://clustrmaps.com/site/1a3c7'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
+        </div>
+  </div>
+</body>
+</html>

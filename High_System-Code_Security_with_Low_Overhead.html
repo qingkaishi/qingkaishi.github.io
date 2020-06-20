@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage | High System-Code Security with Low Overhead | Qingkai Shi</title>
+<meta name="keywords" content="Qingkai Shi, QingkaiShi, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+var browser = {
+   versions: function() {
+   var u = navigator.userAgent,
+   ua = navigator.userAgent.toLowerCase();
+   return { //移动终端浏览器版本信息
+       trident: u.indexOf('Trident') > -1, //IE内核
+       presto: u.indexOf('Presto') > -1, //opera内核
+       webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+       gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+       mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+       ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+       android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+       iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+       iPad: u.indexOf('iPad') > -1, //是否iPad
+       webApp: u.indexOf('Safari') == -1 ,//是否web应该程序，没有头部与底部
+       wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
+       weibo:ua.match(/WeiBo/i) == "weibo",//微博
+       qq:ua.match(/QQ/i) == "qq"//qq
+   };
+   }(),
+   language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+function testmobile() {
+   if (browser.versions.mobile) {
+      var info = document.getElementById('info');
+      info.style.clear = 'both';
+
+      var container = document.getElementById('container');
+      container.style.width = '100%';
+
+      var sig = document.getElementById('sig');
+      sig.style.display = 'none';
+   }
+};
+
+
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+	
+        <h1>High System-Code Security with Low Overhead</h1>
+    <div id="content">
+<p><strong>Intro</strong>: These checks might verify that array indices are in
+bounds, that arithmetic operations do not overflow, or that data structure
+invariants hold. If a sanity check fails, it typically is unrecoverable, and the
+program is aborted, because undefined behavior may affect security. Other than
+that, sanity checks do not affect the program state.</p>
+
+<p><strong>Issue</strong>: These checks are performed at runtime, and thus
+overhead is the problem.</p>
+
+<p><strong>Idea</strong>: Developers/ope­rators can specify what level of
+overhead they find acceptable for a given workload. It is often possible to
+obtain high security at low overhead, for two reasons: First, the checks that
+are most important for security are checks guarding obscure, untested, buggy
+code where protection is most needed. Because this code is typically cold, the
+checks are rarely executed and do not contribute much to the overhead. Second,
+most of the induced overhead comes from only few expensive checks located inside
+hot loops. These checks are executed over and over again, burning cycles while
+likely not adding much to the program's security.</p>
+
+<p><strong>Related Work</strong>:</p>
+
+<ol style="list-style-type:lower-alpha">
+	<li>Data Execution Prevention</li>
+</ol>
+
+<p>A widely deployed sanity check supported by hardware is Data Execution
+Prevention (DEP). In a DEP-protected system, a process’s data pages are
+marked non-executable in the system page table.</p>
+
+<ol style="list-style-type:lower-alpha" start="2">
+	<li>Assertions</li>
+</ol>
+
+<p>Developer-provided assertions are the most common type of sanity check in
+code. C. A. R. Hoare reported in 2002 that over 250,000 assertions are present
+in Microsoft Office.</p>
+
+<ol style="list-style-type:lower-alpha" start="3">
+	<li>Undefined Behavior Checks</li>
+</ol>
+
+<p>UndefinedBeha­viorSanitizer (UBSan) instruments a program with checks that
+ensure the absence of various operations that are undefined in the C/C++
+language standards, and thus generally unsafe to use. UBSan catches NULL pointer
+dereferences, unaligned memory accesses, signed integer overflows, out of bound
+bit shifts, etc.</p>
+
+<ol style="list-style-type:lower-alpha" start="4">
+	<li>Stack Canaries</li>
+</ol>
+
+<p>Another widely used application security mechanism are stack canaries and the
+related Structured Exception Handler Override Protection (SEHOP). Stack canaries
+detect when function return addresses have been overwritten. Compiler-inserted
+code in the function prologue inserts a secret value just before the function
+return address on the program stack. Before returning, the function verifies
+that the secret value is still in place. Buffer overflows overwriting the return
+address will very likely modify the secret value and are thus detected before
+the attacker gains control.</p>
+
+<ol style="list-style-type:lower-alpha" start="5">
+	<li>Memory Safety Checks</li>
+</ol>
+
+<p>The available tools instrument a target program such that they insert code
+before each memory access to check whether the address is valid. The strictness
+of this definition of “valid” influences the provided safety guarantees and
+the performance overhead.</p>
+
+<p><strong>Res</strong>: <a
+href="http://www.qingkaishi.com/pdfs/High System-Code Security with Low Overhead.pdf">paper</a></p>
+
+<!-- by Texy2! -->      </div>
+    </div>
+        <style onload="testmobile()"></style>
+        <div id="footer">
+             Copyright 2020 Qingkai Shi. Last modified: 16.10.2019, 13:52:00. <br>
+             <a href="./?edit=High_System-Code_Security_with_Low_Overhead">Edit page</a> | 
+             <a href="./fileupload.php", target="blank">Upload files</a> | 
+             <a href="./?edit=">Create new page</a> <br><br>
+             <a href='https://clustrmaps.com/site/1a3c7'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
+        </div>
+  </div>
+</body>
+</html>
