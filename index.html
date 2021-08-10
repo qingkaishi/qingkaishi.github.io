@@ -34,22 +34,21 @@ var browser = {
 function testmobile() {
    if (browser.versions.mobile) {
       var info = document.getElementById('info');
-      info.style.clear = 'both';
+      if (info) { info.style.clear = 'both'; }
 
       var container = document.getElementById('container');
-      container.style.width = '100%';
+      if (container) { container.style.width = '100%'; }
 
       var pho = document.getElementById('photo');
-      pho.style.display = 'none';
+      if (pho) { pho.style.display = 'none'; }
 
       var name1 = document.getElementById('name1');
-      name1.style.display = 'none';
+      if (name1) { name1.style.display = 'none'; }
 
       var name2 = document.getElementById('name2');
-      name2.style.display = 'inline';
+      if (name2) { name2.style.display = 'inline'; }
    }
 };
-
 
 </script>
 
