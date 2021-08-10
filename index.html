@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Qingkai Shi's Homepage</title>
+<meta name="keywords" content="Qingkai Shi, QingkaiShi, Pinpoint, Static Code Analyzer, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+var browser = {
+   versions: function() {
+   var u = navigator.userAgent,
+   ua = navigator.userAgent.toLowerCase();
+   return { //移动终端浏览器版本信息
+       trident: u.indexOf('Trident') > -1, //IE内核
+       presto: u.indexOf('Presto') > -1, //opera内核
+       webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+       gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+       mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+       ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+       android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+       iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+       iPad: u.indexOf('iPad') > -1, //是否iPad
+       webApp: u.indexOf('Safari') == -1 ,//是否web应该程序，没有头部与底部
+       wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
+       weibo:ua.match(/WeiBo/i) == "weibo",//微博
+       qq:ua.match(/QQ/i) == "qq"//qq
+   };
+   }(),
+   language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+function testmobile() {
+   if (browser.versions.mobile) {
+      var info = document.getElementById('info');
+      info.style.clear = 'both';
+
+      var container = document.getElementById('container');
+      container.style.width = '100%';
+
+      var pho = document.getElementById('photo');
+      pho.style.display = 'none';
+
+      var name1 = document.getElementById('name1');
+      name1.style.display = 'none';
+
+      var name2 = document.getElementById('name2');
+      name2.style.display = 'inline';
+   }
+};
+
+
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+	
+        
+    <div id="content">
+<center>
+	<div id="content" style="height: auto;">
+		<div id="photo" style="width:180px;float:left;margin-left:50px;"
+		class="figure"><img src="images/sqk.jpg" alt="" width="160" height="205"
+		/></div>
+
+		<div id="name1" style="font-size: 20px;margin-top:3px;"><strong>Qingkai Shi,
+		Ph.D.</strong><br />
+		<br />
+	</div>
+
+		<h2 id="name2" style="display: none">Qingkai Shi, Ph.D.<br />
+		<br />
+	</h2>
+
+		<div id="info">Postdoc Research Associate Working with Prof. Xiangyu Zhang<br />
+		<br />
+		Department of Computer Science, Purdue University, USA<br />
+		<br />
+		Address: 305 N. University Street, West Lafayette, IN 47907<br />
+		<br />
+		Email: qingkaishi AT gmail DOT com       Twitter: @QingkaiS<br />
+	</div>
+	</div>
+</center>
+
+<div id="navigation" style="clear:both"><br />
+
+	<hr />
+
+	<center>
+		<p style="font-size:small;"><a href="/Publications.html">Publications</a> · <a
+		href="https://scholar.google.com/citations?user=EmSYY1EAAAAJ&amp;hl=en">Google
+		Scholar</a> · <a href="https://dblp.org/pid/145/3943.html">DBLP</a> · <a
+		href="#toc-short-bio">Short Bio</a> · <a href="/public_pdfs/CV.pdf">Curriculum
+		Vitae</a></p>
+	</center>
+
+	<hr />
+</div>
+
+<p><br />
+My research interest centres around <strong>programming language</strong>,
+<strong>cybersecurity</strong>, and <strong>software engineering</strong>,
+focusing on the use of compiler techniques, including both static and dynamic
+program analysis, to ensure software reliability.</p>
+
+<ul style="margin-right: 5mm">
+	<li>Static Program Analysis
+		<p>Pinpoint static analyzer is an industrial-strength next-generation automated
+		bug finding tool through static analysis. It has found <a
+		href="/catapult.html">over a hundred bugs</a>, including many CVE-identified
+		ones, in mature open-source systems, including Apache, MySQL, Firefox, and
+		Python. Pinpoint has been successfully commercialized at <a
+		href="http://www.sourcebrella.com">Sourcebrella Inc</a>, which has been acquired
+		by <a href="https://www.antgroup.com/en">Ant Group</a> and deployed in daily
+		operations for improving the quality of <a
+		href="https://global.alipay.com/platform/site/ihome">Alipay</a>, a popular
+		digital payment app with over a billion monthly active users. Interested readers
+		can refer to my <a href="/public_pdfs/thesis.pdf">Ph.D. dissertation</a> and
+		follow-up works on static analysis: value-flow analysis (<a
+		href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <a
+		href="/public_pdfs/ICSE2020a.pdf">ICSE'20a</a>, <a
+		href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>, <a href="/#">OOPSLA'21a</a>),
+		path-sensitivity and SMT solving (<a
+		href="/public_pdfs/ISSTA20-Trident.pdf">ISSTA'20a</a>, <a
+		href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a href="/#">OOPSLA'21b</a>),
+		as well as detecting specific bug types (<a
+		href="/public_pdfs/ICSE2019.pdf">ICSE'19</a> <a href="images/sigsoft.png"><img
+		src="images/award.gif" style="height:1em" /></a>, <a
+		href="/public_pdfs/ISSTA20-VeriBuild.pdf">ISSTA'20b</a>, <a
+		href="/public_pdfs/ISSTA20-CCD.pdf">ISSTA'20c</a>).</p>
+	</li>
+
+	<li>Dynamic Program Analysis
+		<p>Fuzz testing, also known as fuzzing, is an automated software testing
+		technique that is conducted to reveal coding errors and security loopholes in
+		software, networks, or operating systems. We are interested in leveraging our
+		static analysis knowledge to optimize fuzz testers (<a
+		href="/public_pdfs/SP2020.pdf">S&amp;P'20</a>, <a href="/#">S&amp;P'22</a>) and
+		applying fuzz testers to domain-specific application scenarios, including
+		testing black boxes with entropy (<a href="/public_pdfs/TR2016.pdf">TRel'16</a>,
+		<a href="/public_pdfs/ISSTA20-DeepGini.pdf">ISSTA'20d</a>), testing
+		multi-threading programs (<a href="/public_pdfs/TSE2016.pdf">TSE'16</a>), and
+		testing SMT solvers (<a href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
+		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>).</p>
+	</li>
+</ul>
+
+<p>Five representative papers on static analysis:</p>
+
+<ol style="margin-right: 5mm">
+	<li style="margin-bottom: 10px;"><a
+	href="https://2021.splashcon.org/track/splash-2021-oopsla">OOPSLA'21</a>: <a
+	href="/#">Indexing Context-Sensitive Reachability</a><br />
+	<strong>Qingkai Shi</strong>, Yongchao Wang, Charles Zhang<br />
+	The 36th ACM SIGPLAN Conference on Object Oriented Programming, Systems,
+	Languages, and Applications<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://pldi21.sigplan.org/home">PLDI'21</a>: <a
+	href="/public_pdfs/PLDI21-Fusion.pdf">Path-Sensitive Sparse Analysis without
+	Path Conditions</a><br />
+	<strong>Qingkai Shi</strong>, Peisen Yao, Rongxin Wu, Charles Zhang<br />
+	The 42nd ACM SIGPLAN Conference on Programming Language Design and
+	Implementation<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/icse-2020">ICSE'20</a>: <a
+	href="/public_pdfs/ICSE2020a.pdf">Pipelining Bottom-up Data Flow Analysis</a><br
+	/>
+	<strong>Qingkai Shi</strong>, Charles Zhang<br />
+	The 42nd ACM/IEEE International Conference on Software Engineering<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/icse-2020">ICSE'20</a>: <a
+	href="/public_pdfs/ICSE2020b.pdf">Conquering the Extensional Scalability Problem
+	for Value-Flow Analysis Frameworks</a><br />
+	<strong>Qingkai Shi</strong>, Rongxin Wu, Gang Fan, Charles Zhang<br />
+	The 42nd ACM/IEEE International Conference on Software Engineering<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://pldi18.sigplan.org/home">PLDI'18</a>: <a
+	href="/public_pdfs/PLDI2018.pdf">Pinpoint: Fast and Precise Sparse Value Flow
+	Analysis for Million Lines of Code</a><br />
+	<strong>Qingkai Shi</strong>, Xiao Xiao, Rongxin Wu, Jinguo Zhou, Gang Fan,
+	Charles Zhang<br />
+	The 39th ACM SIGPLAN Conference on Programming Language Design and
+	Implementation<br />
+</li>
+</ol>
+
+<p>Five representative papers on dynamic analysis:</p>
+
+<ol style="margin-right: 5mm">
+	<li style="margin-bottom: 10px;"><a
+	href="https://www.ieee-security.org/TC/SP2022">S&amp;P'22</a>: <a
+	href="/#">Beacon: Directed Grey-Box Fuzzing with Provable Path Pruning</a><br />
+	Heqing Huang, Yiyuan Guo, <strong>Qingkai Shi*</strong>, Peisen Yao, Rongxin Wu,
+	Charles Zhang<br />
+	The 43rd IEEE Symposium on Security and Privacy<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://www.ieee-security.org/TC/SP2020">S&amp;P'20</a>: <a
+	href="/public_pdfs/SP2020.pdf">Pangolin: Incremental Hybrid Fuzzing with
+	Polyhedral Path Abstraction</a><br />
+	Heqing Huang, Peisen Yao, Rongxin Wu, <strong>Qingkai Shi*</strong>, Charles
+	Zhang<br />
+	The 41st IEEE Symposium on Security and Privacy<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/issta-2020">ISSTA'20</a>: <a
+	href="/public_pdfs/ISSTA20-DeepGini.pdf">DeepGini: Prioritizing Massive Tests to
+	Enhance the Robustness of Deep Neural Networks.</a><br />
+	Yang Feng, <strong>Qingkai Shi*</strong>, Xinyu Gao, Jun Wan, Chunrong Fang,
+	Zhenyu Chen<br />
+	The 29th ACM SIGSOFT International Symposium on Software Testing and Analysis<br
+	/>
+</li>
+
+	<li style="margin-bottom: 10px;"><a href="/#">TSE'16</a>: <a
+	href="/public_pdfs/TSE2016.pdf">Verifying Synchronization for Atomicity
+	Violation Fixing</a><br />
+	<strong>Qingkai Shi</strong>, Jeff Huang, Zhenyu Chen, Baowen Xu<br />
+	The IEEE Transactions on Software Engineering, 42(3), 2016<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a href="/#">TRel'16</a>: <a
+	href="/public_pdfs/TR2016.pdf">Measuring the Diversity of a Test Set with
+	Distance Entropy</a><br />
+	<strong>Qingkai Shi</strong>, Zhenyu Chen, Chunrong Fang, Yang Feng, Baowen
+	Xu<br />
+	The IEEE Transactions on Reliability, 65(1), 2016<br />
+</li>
+</ol>
+
+<p>My research has won me the following honors:</p>
+
+<ul>
+	<li>Overseas High-Caliber Personnel in Shenzhen (2021)</li>
+
+	<li>ACM SIGSOFT Distinguished Paper Award (2019)</li>
+
+	<li>Champion in NASAC Prototype Competition (2016, 2018a, 2018b)</li>
+
+	<li>Hong Kong Ph.D. Fellowship (2015)</li>
+
+	<li>China National Scholarship (2010, 2014)</li>
+</ul>
+
+<div><br />
+</div>
+
+<h2 id="toc-short-bio">Short Bio</h2>
+
+<p>Qingkai Shi is a Postdoc Research Associate in the department of computer
+science, Purdue University. His major research interest is the use of compiler
+techniques to ensure software reliability. He has published extensively at
+premium venues of programming languages (PLDI, OOPSLA), software engineering
+(ICSE, FSE, TSE, ISSTA), and cybersecurity (S&amp;P). His research received many
+awards including ACM SIGSOFT Distinguished Paper Award and Hong Kong Ph.D.
+Fellowship. His research has led to the discovery of over a hundred software
+vulnerabilities in open-source software and has been successfully commercialized
+in Sourcebrella Inc, a static analysis tool vendor. Qingkai obtained his Ph.D.
+and B.S. from Nanjing University and the Hong Kong University of Science and
+Technology, respectively.</p>
+
+<!-- by Texy2! -->      </div>
+    </div>
+        <style onload="testmobile()"></style>
+        <div id="footer">
+             Copyright 2021 Qingkai Shi. Last modified: 10.08.2021, 13:12:37. <br>
+             <a href="./?edit=Introduction">Edit page</a> | 
+             <a href="./fileupload.php", target="blank">Upload files</a> | 
+             <a href="./?edit=">Create new page</a> <br><br>
+             <a href='https://clustrmaps.com/site/1a3c7'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
+        </div>
+  </div>
+</body>
+</html>

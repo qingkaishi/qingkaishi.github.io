@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Qingkai Shi's Homepage</title>
+<meta name="keywords" content="Qingkai Shi, QingkaiShi, Pinpoint, Static Code Analyzer, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+
+var browser = {
+   versions: function() {
+   var u = navigator.userAgent,
+   ua = navigator.userAgent.toLowerCase();
+   return { //移动终端浏览器版本信息
+       trident: u.indexOf('Trident') > -1, //IE内核
+       presto: u.indexOf('Presto') > -1, //opera内核
+       webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+       gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+       mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+       ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+       android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+       iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+       iPad: u.indexOf('iPad') > -1, //是否iPad
+       webApp: u.indexOf('Safari') == -1 ,//是否web应该程序，没有头部与底部
+       wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
+       weibo:ua.match(/WeiBo/i) == "weibo",//微博
+       qq:ua.match(/QQ/i) == "qq"//qq
+   };
+   }(),
+   language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+function testmobile() {
+   if (browser.versions.mobile) {
+      var info = document.getElementById('info');
+      info.style.clear = 'both';
+
+      var container = document.getElementById('container');
+      container.style.width = '100%';
+
+      var pho = document.getElementById('photo');
+      pho.style.display = 'none';
+
+      var name1 = document.getElementById('name1');
+      name1.style.display = 'none';
+
+      var name2 = document.getElementById('name2');
+      name2.style.display = 'inline';
+   }
+};
+
+
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+	
+        <h1>Publications</h1>
+    <div id="content">
+<p>Copyright notice: The documents referenced below are included by the
+contributing authors as a means to ensure timely dissemination of scholarly and
+technical work on a non-commercial basis. Copyright and all rights therein are
+maintained by the authors or by other copyright holders, notwithstanding that
+they have offered their works here electronically. It is understood that all
+persons copying this information will adhere to the terms and constraints
+invoked by each author's copyright.<br />
+<br />
+<a href="/">Back to homepage.</a></p>
+
+<hr />
+
+<div><br />
+</div>
+
+<ol style="margin-right: 5mm">
+	<li style="margin-bottom: 10px;"><a
+	href="https://www.ieee-security.org/TC/SP2022">S&amp;P'22</a>: <a
+	href="/#">Beacon: Directed Grey-Box Fuzzing with Provable Path Pruning</a><br />
+	Heqing Huang, Yiyuan Guo, <strong>Qingkai Shi*</strong>, Peisen Yao, Rongxin Wu,
+	Charles Zhang<br />
+	The 43rd IEEE Symposium on Security and Privacy<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://2021.splashcon.org/track/splash-2021-oopsla">OOPSLA'21</a>: <a
+	href="/#">Indexing Context-Sensitive Reachability</a><br />
+	<strong>Qingkai Shi</strong>, Yongchao Wang, Charles Zhang<br />
+	The 36th ACM SIGPLAN Conference on Object Oriented Programming, Systems,
+	Languages, and Applications<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://2021.splashcon.org/track/splash-2021-oopsla">OOPSLA'21</a>: <a
+	href="/#">Program Analysis via Efficient Symbolic Abstraction</a><br />
+	Peisen Yao, <strong>Qingkai Shi*</strong>, Heqing Huang, Charles Zhang<br />
+	The 36th ACM SIGPLAN Conference on Object Oriented Programming, Systems,
+	Languages and Applications<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://2021.esec-fse.org/">ESEC/FSE'21</a>: <a
+	href="/public_pdfs/FSE21.pdf">Skeletal Approximation Enumeration for SMT Solver
+	Testing</a><br />
+	Peisen Yao, Heqing Huang, Wensheng Tang, <strong>Qingkai Shi</strong>, Rongxin
+	Wu, Charles Zhang<br />
+	The 29th ACM Joint European Software Engineering Conference and Symposium on the
+	Foundations of Software Engineering<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/issta-2021">ISSTA'21</a>: <a
+	href="/public_pdfs/ISSTA2021.pdf">Fuzzing SMT Solvers via Two-Dimensional Input
+	Space Exploration</a><br />
+	Peisen Yao, Heqing Huang, Wensheng Tang, <strong>Qingkai Shi</strong>, Rongxin
+	Wu, Charles Zhang<br />
+	The 30th ACM SIGSOFT International Symposium on Software Testing and Analysis<br
+	/>
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://pldi21.sigplan.org/home">PLDI'21</a>: <a
+	href="/public_pdfs/PLDI21-Fusion.pdf">Path-Sensitive Sparse Analysis without
+	Path Conditions</a><br />
+	<strong>Qingkai Shi</strong>, Peisen Yao, Rongxin Wu, Charles Zhang<br />
+	The 42nd ACM SIGPLAN Conference on Programming Language Design and
+	Implementation<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/issta-2020">ISSTA'20</a>: <a
+	href="/public_pdfs/ISSTA20-Trident.pdf">Fast Bit-Vector Satisfiability</a><br />
+	Peisen Yao, <strong>Qingkai Shi*</strong>, Heqing Huang, Charles Zhang<br />
+	The 29th ACM SIGSOFT International Symposium on Software Testing and Analysis<br
+	/>
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/issta-2020">ISSTA'20</a>: <a
+	href="/public_pdfs/ISSTA20-VeriBuild.pdf">Escaping Dependency Hell: Finding
+	Build Dependency Errors with the Unified Dependency Graph</a><br />
+	Gang Fan, Chengpeng Wang, Rongxin Wu, Xiao Xiao, <strong>Qingkai Shi</strong>,
+	Charles Zhang<br />
+	The 29th ACM SIGSOFT International Symposium on Software Testing and Analysis<br
+	/>
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/issta-2020">ISSTA'20</a>: <a
+	href="/public_pdfs/ISSTA20-DeepGini.pdf">DeepGini: Prioritizing Massive Tests to
+	Enhance the Robustness of Deep Neural Networks.</a><br />
+	Yang Feng, <strong>Qingkai Shi*</strong>, Xinyu Gao, Jun Wan, Chunrong Fang,
+	Zhenyu Chen<br />
+	The 29th ACM SIGSOFT International Symposium on Software Testing and Analysis<br
+	/>
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/issta-2020">ISSTA'20</a>: <a
+	href="/public_pdfs/ISSTA20-CCD.pdf">Functional Code Clone Detection with Syntax
+	and Semantics Fusion Learning.</a><br />
+	Chunrong Fang, Zixi Liu, Yangyang Shi, Jeff Huang, <strong>Qingkai
+	Shi</strong><br />
+	The 29th ACM SIGSOFT International Symposium on Software Testing and Analysis<br
+	/>
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/icse-2020">ICSE'20</a>: <a
+	href="/public_pdfs/ICSE2020a.pdf">Pipelining Bottom-up Data Flow Analysis</a><br
+	/>
+	<strong>Qingkai Shi</strong>, Charles Zhang<br />
+	The 42nd ACM/IEEE International Conference on Software Engineering<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/icse-2020">ICSE'20</a>: <a
+	href="/public_pdfs/ICSE2020b.pdf">Conquering the Extensional Scalability Problem
+	for Value-Flow Analysis Frameworks</a><br />
+	<strong>Qingkai Shi</strong>, Rongxin Wu, Gang Fan, Charles Zhang<br />
+	The 42nd ACM/IEEE International Conference on Software Engineering<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://www.ieee-security.org/TC/SP2020">S&amp;P'20</a>: <a
+	href="/public_pdfs/SP2020.pdf">Pangolin: Incremental Hybrid Fuzzing with
+	Polyhedral Path Abstraction</a><br />
+	Heqing Huang, Peisen Yao, Rongxin Wu, <strong>Qingkai Shi*</strong>, Charles
+	Zhang<br />
+	The 41st IEEE Symposium on Security and Privacy<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://conf.researchr.org/home/icse-2019">ICSE'19</a>: <a
+	href="/public_pdfs/ICSE2019.pdf">Smoke: Scalable Path-Sensitive Memory Leak
+	Detection for Millions of Lines of Code</a><br />
+	Gang Fan, Rongxin Wu, <strong>Qingkai Shi</strong>, Xiao Xiao, Jinguo Zhou,
+	Charles Zhang<br />
+	The 41st ACM/IEEE International Conference on Software Engineering<br />
+	<img src="images/award.gif" style="height:1em" /> <strong style="color:red">ACM
+	SIGSOFT Distinguished Paper Award</strong><br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a
+	href="https://pldi18.sigplan.org/home">PLDI'18</a>: <a
+	href="/public_pdfs/PLDI2018.pdf">Pinpoint: Fast and Precise Sparse Value Flow
+	Analysis for Million Lines of Code</a><br />
+	<strong>Qingkai Shi</strong>, Xiao Xiao, Rongxin Wu, Jinguo Zhou, Gang Fan,
+	Charles Zhang<br />
+	The 39th ACM SIGPLAN Conference on Programming Language Design and
+	Implementation<br />
+	(<a href="/public_pdfs/pinpoint-pldi.pptx">Slides</a>) (<a
+	href="/pldi2018ae-wiki/">Artifact Evaluation</a>) (<a
+	href="https://www.youtube.com/watch?v=GODohqCuEAo">Media</a>)<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a href="/#">TSE'16</a>: <a
+	href="/public_pdfs/TSE2016.pdf">Verifying Synchronization for Atomicity
+	Violation Fixing</a><br />
+	<strong>Qingkai Shi</strong>, Jeff Huang, Zhenyu Chen, Baowen Xu<br />
+	The IEEE Transactions on Software Engineering, 42(3), 2016<br />
+</li>
+
+	<li style="margin-bottom: 10px;"><a href="/#">TRel'16</a>: <a
+	href="/public_pdfs/TR2016.pdf">Measuring the Diversity of a Test Set with
+	Distance Entropy</a><br />
+	<strong>Qingkai Shi</strong>, Zhenyu Chen, Chunrong Fang, Yang Feng, Baowen
+	Xu<br />
+	The IEEE Transactions on Reliability, 65(1), 2016<br />
+</li>
+</ol>
+
+<!-- by Texy2! -->      </div>
+    </div>
+        <style onload="testmobile()"></style>
+        <div id="footer">
+             Copyright 2021 Qingkai Shi. Last modified: 07.08.2021, 12:06:09. <br>
+             <a href="./?edit=Publications">Edit page</a> | 
+             <a href="./fileupload.php", target="blank">Upload files</a> | 
+             <a href="./?edit=">Create new page</a> <br><br>
+             <a href='https://clustrmaps.com/site/1a3c7'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
+        </div>
+  </div>
+</body>
+</html>
