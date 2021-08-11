@@ -31,15 +31,6 @@ var browser = {
    language: (navigator.browserLanguage || navigator.language).toLowerCase()
 };
 
-function noindent(lists) {
-	for (i = 0; i < lists.length; ++i) {
-		list = lists[i];
-		list.style.padding = 0;
-		list.style.margin-left = 0;
-		list.style.list-style-position = 'inside';
-	}
-}
-
 function testmobile() {
    if (browser.versions.mobile) {
       var info = document.getElementById('info');
@@ -56,11 +47,6 @@ function testmobile() {
 
       var name2 = document.getElementById('name2');
       if (name2) { name2.style.display = 'inline'; }
-
-	  var uls = document.getElementsByTagName('ul');
-	  noindent(uls);
-	  var ols = document.getElementsByTagName('ol');
-	  noindent(ols);
    }
 };
 
