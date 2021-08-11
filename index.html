@@ -47,6 +47,21 @@ function testmobile() {
 
       var name2 = document.getElementById('name2');
       if (name2) { name2.style.display = 'inline'; }
+
+	  var ols = document.getElementsByTagName('ol');
+	  for (i = 0; i < ols.length; ++i) {
+		  var ol = ols[i];
+		  ol.style.margin_left = 0;
+		  ol.style.padding = 0;
+		  ol.style.list_style_position = 'inside';
+	  }
+	  var uls = document.getElementsByTagName('ul');
+	  for (i = 0; i < uls.length; ++i) {
+		  var ul = uls[i];
+		  ul.style.margin_left = 0;
+		  ul.style.padding = 0;
+		  ul.style.list_style_position = 'inside';
+	  }
    }
 };
 
