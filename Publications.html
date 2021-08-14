@@ -32,37 +32,42 @@ var browser = {
 };
 
 function testmobile() {
-   if (browser.versions.mobile) {
-      var info = document.getElementById('info');
-      if (info) { info.style.clear = 'both'; }
+	if (browser.versions.mobile) {
+		var info = document.getElementById('info');
+		if (info) { info.style.clear = 'both'; }
 
-      var container = document.getElementById('container');
-      if (container) { container.style.width = '100%'; }
+		var container = document.getElementById('container');
+		if (container) { container.style.width = '100%'; }
 
-      var pho = document.getElementById('photo');
-      if (pho) { pho.style.display = 'none'; }
+		var pho = document.getElementById('photo');
+		if (pho) { pho.style.display = 'none'; }
 
-      var name1 = document.getElementById('name1');
-      if (name1) { name1.style.display = 'none'; }
+		var name1 = document.getElementById('name1');
+		if (name1) { name1.style.display = 'none'; }
 
-      var name2 = document.getElementById('name2');
-      if (name2) { name2.style.display = 'inline'; }
+		var name2 = document.getElementById('name2');
+		if (name2) { name2.style.display = 'inline'; }
 
-	  var ols = document.getElementsByTagName('ol');
-	  for (i = 0; i < ols.length; ++i) {
-		  var ol = ols[i];
-		  ol.style.margin_left = 0;
-		  ol.style.padding = '0 0 0 15px';
-		  ol.style.list_style_position = 'inside';
-	  }
-	  var uls = document.getElementsByTagName('ul');
-	  for (i = 0; i < uls.length; ++i) {
-		  var ul = uls[i];
-		  ul.style.margin_left = 0;
-		  ul.style.padding = '0 0 0 15px';
-		  ul.style.list_style_position = 'inside';
-	  }
-   }
+		var ols = document.getElementsByTagName('ol');
+		for (i = 0; i < ols.length; ++i) {
+			var ol = ols[i];
+			ol.style.margin_left = 0;
+			ol.style.padding = '0 0 0 15px';
+			ol.style.list_style_position = 'inside';
+		}
+		var uls = document.getElementsByTagName('ul');
+		for (i = 0; i < uls.length; ++i) {
+			var ul = uls[i];
+			ul.style.margin_left = 0;
+			ul.style.padding = '0 0 0 15px';
+			ul.style.list_style_position = 'inside';
+		}
+	}
+    var domain = document.domain;
+	if (domain.indexOf("qingkaishi.github.io") >= 0) {
+		var edit = document.getElementById('edit');
+		if (edit) { edit.style.display = 'none'; }
+	}
 };
 
 </script>
@@ -248,14 +253,17 @@ invoked by each author's copyright.<br />
 
 <!-- by Texy2! -->      </div>
     </div>
-        <style onload="testmobile()"></style>
         <div id="footer">
              Copyright 2021 Qingkai Shi. Last modified: 07.08.2021, 12:06:09. <br>
+			 <div id="edit">
              <a href="./?edit=Publications">Edit page</a> | 
              <a href="./fileupload.php", target="blank">Upload files</a> | 
-             <a href="./?edit=">Create new page</a> <br><br>
+             <a href="./?edit=">Create new page</a> <br>
+			 </div>
+			 <br>
              <a href='https://clustrmaps.com/site/1a3c7'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
         </div>
+		<style onload="testmobile()"></style>
   </div>
 </body>
 </html>
