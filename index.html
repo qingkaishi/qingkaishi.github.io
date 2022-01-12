@@ -63,10 +63,13 @@ function testmobile() {
 			ul.style.list_style_position = 'inside';
 		}
 	}
-    var domain = document.domain;
+	var domain = document.domain;
 	if (domain.indexOf("qingkaishi.github.io") >= 0) {
 		var edit = document.getElementById('edit');
 		if (edit) { edit.style.display = 'none'; }
+		
+		var tracker = document.getElementById('tracker');
+		if (tracker) { tracker.href='/#' }
 	}
 };
 
@@ -297,14 +300,14 @@ Technology, respectively.</p>
 <!-- by Texy2! -->      </div>
     </div>
         <div id="footer">
-             Copyright 2021 Qingkai Shi. Last modified: 03.12.2021, 19:32:38. <br>
+             Copyright 2022 Qingkai Shi. Last modified: 03.12.2021, 19:32:38. <br>
 			 <div id="edit">
              <a href="./?edit=Introduction">Edit page</a> | 
              <a href="./fileupload.php", target="blank">Upload files</a> | 
              <a href="./?edit=">Create new page</a> <br>
 			 </div>
 			 <br>
-             <a href='https://clustrmaps.com/site/1a3c7'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
+             <a href='https://clustrmaps.com/site/1a3c7' title='Visit tracker' id='tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>
         </div>
 		<style onload="testmobile()"></style>
   </div>
