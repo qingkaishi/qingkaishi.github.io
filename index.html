@@ -68,9 +68,17 @@ function testmobile() {
 	if (domain.indexOf("qingkaishi.github.io") >= 0) {
 		var edit = document.getElementById('edit');
 		if (edit) { edit.style.display = 'none'; }
-		
-		var tracker = document.getElementById('tracker');
+        
+        var tracker = document.getElementById('tracker');
 		if (tracker) { tracker.href='/#' }
+        var tracker_image = document.getElementById('tracker_image');
+		if (tracker_image) { tracker_image.src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff' }
+	} else if(domain.indexOf("localhost") >= 0) {
+        var footer = document.getElementById('footer');
+        if (footer) {
+            footer.innerHTML += 
+            "<a href='https://clustrmaps.com/site/1a3c7' title='Visit tracker' id='tracker'><img src='images/map_v2.png' alt='' id='tracker_image'/></a>"
+        }
 	}
 }
 
@@ -236,7 +244,6 @@ Kong University of Science and Technology, respectively.</p>
              <a href="./?edit=">Create new page</a> <br>
 			 </div>
 			 <br>
-             <a href='https://clustrmaps.com/site/1a3c7' title='Visit tracker' id='tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff' alt=''/></a>
         </div>
 		<style onload="testmobile()"></style>
   </div>
