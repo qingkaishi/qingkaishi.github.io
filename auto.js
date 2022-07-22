@@ -126,3 +126,14 @@ function display_papers(type) {
         year = all_years[k++]
     }
 }
+
+function underline_text(el) {
+    var all_navigation_links = document.getElementsByClassName('nav')
+    var i = 0
+    var link = all_navigation_links[i++]
+    while(link) {
+        link.style.textDecorationLine = 'none'
+        link = all_navigation_links[i++]
+    }
+    el.style.textDecorationLine = 'underline'
+}
