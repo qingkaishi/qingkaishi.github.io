@@ -40,3 +40,4 @@ form div.edit-block{padding:1em 0}
 .tg tr:nth-child(even){background-color: #f2f2f2;}
 .tg tr:hover {background-color: #ddd;}
 .tg th {padding-top: 8px; padding-bottom: 8px; text-align: left; background-color: gray; color: white;}
+.tg th:nth-child(5), td:nth-child(5) { display: none }
