@@ -1,6 +1,5 @@
-
 var browser = {
-    versions: function() {
+    versions: function () {
         var u = navigator.userAgent,
             ua = navigator.userAgent.toLowerCase();
         return { //移动终端浏览器版本信息
@@ -13,10 +12,10 @@ var browser = {
             android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
             iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
             iPad: u.indexOf('iPad') > -1, //是否iPad
-            webApp: u.indexOf('Safari') == -1 ,//是否web应该程序，没有头部与底部
-            wechat:ua.match(/MicroMessenger/i) == "micromessenger",//微信
-            weibo:ua.match(/WeiBo/i) == "weibo",//微博
-            qq:ua.match(/QQ/i) == "qq"//qq
+            webApp: u.indexOf('Safari') == -1,//是否web应该程序，没有头部与底部
+            wechat: ua.match(/MicroMessenger/i) == "micromessenger",//微信
+            weibo: ua.match(/WeiBo/i) == "weibo",//微博
+            qq: ua.match(/QQ/i) == "qq"//qq
         };
     }(),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
@@ -25,19 +24,29 @@ var browser = {
 function testmobile() {
     if (browser.versions.mobile) {
         var info = document.getElementById('info');
-        if (info) { info.style.clear = 'both'; }
+        if (info) {
+            info.style.clear = 'both';
+        }
 
         var container = document.getElementById('container');
-        if (container) { container.style.width = '100%'; }
+        if (container) {
+            container.style.width = '100%';
+        }
 
         var pho = document.getElementById('photo');
-        if (pho) { pho.style.display = 'none'; }
+        if (pho) {
+            pho.style.display = 'none';
+        }
 
         var name1 = document.getElementById('name1');
-        if (name1) { name1.style.display = 'none'; }
+        if (name1) {
+            name1.style.display = 'none';
+        }
 
         var name2 = document.getElementById('name2');
-        if (name2) { name2.style.display = 'inline'; }
+        if (name2) {
+            name2.style.display = 'inline';
+        }
 
         var ols = document.getElementsByTagName('ol');
         for (i = 0; i < ols.length; ++i) {
@@ -58,13 +67,15 @@ function testmobile() {
     var footer = document.getElementById('footer');
     if (domain.indexOf("qingkaishi.github.io") >= 0) {
         var edit = document.getElementById('edit');
-        if (edit) { edit.style.display = 'none'; }
+        if (edit) {
+            edit.style.display = 'none';
+        }
 
         if (footer) {
             footer.innerHTML +=
                 "<a href='/#' title='Visit tracker' id='tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>"
         }
-    } else if(domain.indexOf("localhost") >= 0) {
+    } else if (domain.indexOf("localhost") >= 0) {
         if (footer) {
             footer.innerHTML +=
                 "<a href='https://clustrmaps.com/site/1a3c7' title='Visit tracker' id='tracker'><img src='images/map_v2.png'/></a>"
@@ -101,7 +112,7 @@ function display_papers(type) {
     var all_papers = document.getElementsByTagName('li')
     var i = 0
     var paper = all_papers[i++]
-    while(paper) {
+    while (paper) {
         var type_str = paper.getAttribute('type')
         var type_array = type_str.trim().split(",");
         if (show_all || share(type_array, display_type_array)) {
@@ -115,7 +126,7 @@ function display_papers(type) {
     var all_years = document.getElementsByTagName('h2')
     var k = 0
     var year = all_years[k++]
-    while(year) {
+    while (year) {
         if (show_all) {
             // show years
             year.style.display = 'block'
@@ -131,9 +142,23 @@ function underline_text(el) {
     var all_navigation_links = document.getElementsByClassName('nav')
     var i = 0
     var link = all_navigation_links[i++]
-    while(link) {
+    while (link) {
         link.style.textDecorationLine = 'none'
         link = all_navigation_links[i++]
     }
     el.style.textDecorationLine = 'underline'
+}
+
+function show_list(class_name) {
+    let elements = document.getElementsByClassName(class_name)
+    let i = 0
+    let sp = elements[i++]
+    while (sp) {
+        if (sp.style.display === 'none') {
+            sp.style.display = 'inline'
+        } else {
+            sp.style.display = 'none'
+        }
+        sp = elements[i++]
+    }
 }

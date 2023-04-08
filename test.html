@@ -67,16 +67,46 @@ languages (PLDI, OOPSLA), software engineering (ICSE, FSE), and cybersecurity
 Paper Award, ACM SIGSOFT Distinguished Paper Award, and Hong Kong Ph.D.
 Fellowship. His research has led to the discovery of hundreds of zero-day
 software vulnerabilities and has been successfully commercialized in
-Sourcebrella Inc, a static analysis tool vendor. Qingkai obtained his B.S. and
-Ph.D. from Nanjing University and the Hong Kong University of Science and
-Technology.</p>
+Sourcebrella Inc. Qingkai obtained his B.S. and Ph.D. from Nanjing University
+and the Hong Kong University of Science and Technology.</p>
 
 <ul style="margin-right: 5mm">
-	<li>Static Analysis for Reverse Engineering
-		<p>I am currently working on reverse engineering, which attempts to understand
-		through logical reasoning how a previously made software accomplishes a task
-		with very little insight into exactly how it does so. We reverse engineer, or
-		disassemble, binary code into assembly code (<a
+	<li><u><i>Static Analysis for Vulnerability Scanning</i></u>
+		<p>Pinpoint is an industrial-strength automated software vulnerability scanner.
+		It has found <a href="/catapult.html">hundreds of bugs</a>, including many CVEs,
+		in mature systems. It has been successfully commercialized at Sourcebrella Inc
+		(acquired by <a href="https://www.antgroup.com/en">Ant Group</a> in 2020) and
+		deployed in daily operations for improving the quality of <a style="color:black"
+		href="https://global.alipay.com/platform/site/ihome">Alipay</a>, a popular
+		digital payment app with over a billion monthly active users. Interested readers
+		can refer to my <a style="color:black" href="/public_pdfs/thesis.pdf">doctoral
+		dissertation</a> as well as follow-up works on sparse dataflow analysis (<a
+		href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <span class="sp1"
+		style="display:none"><a href="/public_pdfs/ICSE2020a.pdf">ICSE'20a</a>, <a
+		href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>,</span> <a
+		href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a
+		href="/public_pdfs/OOPSLA21.pdf">OOPSLA'21</a>, <a
+		href="/public_pdfs/OOPSLA22-FLARE.pdf">OOPSLA'22a</a>, <span class="sp1"
+		style="display:none"><a href="/public_pdfs/TOSEM23.pdf">TOSEM'23</a></span> <a
+		href="" onclick="show_list('sp1'); return false;">…</a>) and techniques that
+		detect specific bug types (<a href="/public_pdfs/ICSE2019.pdf">ICSE'19</a><a
+		href="images/sigsoft.png"><img src="images/award.gif" style="height:1em" /></a>,
+		<span class="sp2" style="display:none"><a
+		href="/public_pdfs/ISSTA20-VeriBuild.pdf">ISSTA'20b</a>, <a
+		href="/public_pdfs/ISSTA20-CCD.pdf">ISSTA'20c</a>, <a
+		href="/public_pdfs/ICSE22.pdf">ICSE'22</a>,</span> <a
+		href="/public_pdfs/OOPSLA22Cres.pdf">OOPSLA'22b</a><a
+		href="images/sigsoft.png"><img src="images/award.gif" style="height:1em" /></a>,
+		<span class="sp2" style="display:none"><a
+		href="/public_pdfs/FSE22.pdf">ESEC/FSE'22</a></span> <a href=""
+		onclick="show_list('sp2'); return false;">…</a>).</p>
+	</li>
+
+	<li><u><i>Static Analysis for Reverse Engineering</i></u>
+		<p>Reverse engineering by static program analysis attempts to understand through
+		logical reasoning how a previously made software accomplishes a task with very
+		little insight into exactly how it does so. We reverse engineer, or disassemble,
+		binary code into assembly code (<a
 		href="/public_pdfs/SP23DARM.pdf">S&amp;P'23</a>); we reverse engineer software
 		implementations to obtain the specification of input formats and state machines.
 		We expect to use these techniques to facilitate automated security analysis such
@@ -85,53 +115,30 @@ Technology.</p>
 		techniques.</p>
 	</li>
 
-	<li>Static Analysis for Vulnerability Scanning
-		<p>Pinpoint is an industrial-strength automated software vulnerability scanner.
-		It has found <a href="/catapult.html">hundreds of bugs</a>, including <a
-		href="/CVE.html">many CVEs</a>, in mature systems. It has been successfully
-		commercialized at <a href="http://www.sourcebrella.com">Sourcebrella Inc</a>
-		(acquired by <a href="https://www.antgroup.com/en">Ant Group</a> in 2020) and
-		deployed in daily operations for improving the quality of <a
-		href="https://global.alipay.com/platform/site/ihome">Alipay</a>, a popular
-		digital payment app with over a billion monthly active users. Interested readers
-		can refer to my <a href="/public_pdfs/thesis.pdf">Ph.D. dissertation</a> as well
-		as works on general value-flow analysis (<a
-		href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <a
-		href="/public_pdfs/ICSE2020a.pdf">ICSE'20a</a>, <a
-		href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>, <a
-		href="/public_pdfs/OOPSLA22-FLARE.pdf">OOPSLA'22a</a>, <a
-		href="/public_pdfs/TOSEM23.pdf">TOSEM'23</a>) and detecting specific bug types
-		(<a href="/public_pdfs/ICSE2019.pdf">ICSE'19</a><a
-		href="images/sigsoft.png"><img src="images/award.gif" style="height:1em" /></a>,
-		<a href="/public_pdfs/ISSTA20-VeriBuild.pdf">ISSTA'20b</a>, <a
-		href="/public_pdfs/ISSTA20-CCD.pdf">ISSTA'20c</a>, <a
-		href="/public_pdfs/ICSE22.pdf">ICSE'22</a>, <a
-		href="/public_pdfs/OOPSLA22Cres.pdf">OOPSLA'22b</a><a
-		href="images/sigsoft.png"><img src="images/award.gif" style="height:1em" /></a>,
-		<a href="/public_pdfs/FSE22.pdf">ESEC/FSE'22</a>).</p>
-	</li>
-
-	<li>Static Analysis for Fuzz Testing
+	<li><u><i>Static Analysis for Fuzz Testing</i></u>
 		<p>Fuzz testing is powerful for revealing coding errors and security loopholes
 		in software, networks, or operating systems. We are interested in leveraging
-		static analysis techniques, particularly, abstract interpretation, to make fuzz
-		testers incremental (<a href="/public_pdfs/SP2020.pdf">S&amp;P'20</a>) and
-		directed (<a href="/public_pdfs/SP22.pdf">S&amp;P'22</a>). We also apply fuzz
-		testers to domain-specific application scenarios, including testing black boxes
-		with entropy (<a href="/public_pdfs/TR2016.pdf">TRel'16</a>, <a
-		href="/public_pdfs/ISSTA20-DeepGini.pdf">ISSTA'20d</a>), testing multi-threading
-		programs (<a href="/public_pdfs/TSE2016.pdf">TSE'16</a>), and testing SMT
-		solvers (<a href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
-		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>). We received the Huawei
+		static analysis techniques, particularly, abstract interpretation, to make
+		general fuzzers more efficient (<a
+		href="/public_pdfs/SP2020.pdf">S&amp;P'20</a>, <a
+		href="/public_pdfs/SP22.pdf">S&amp;P'22</a>). We are also interested in applying
+		fuzzers to domain-specific application scenarios, including testing black boxes,
+		testing multi-threading programs, testing complex systems like theorem provers,
+		and more (<span class="sp3" style="display:none"><a
+		href="/public_pdfs/TR2016.pdf">TRel'16</a>, <a
+		href="/public_pdfs/TSE2016.pdf">TSE'16</a>, </span><a
+		href="/public_pdfs/ISSTA20-DeepGini.pdf">ISSTA'20d</a>, <a
+		href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
+		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>, <a href=""
+		onclick="show_list('sp3'); return false;">…</a>). We received the Huawei
 		distinguished collaborator 2021 award on deploying our S&amp;P'20 work.</p>
 	</li>
 
-	<li>Static Analysis for Theorem Proving
+	<li><u><i>Static Analysis for Theorem Proving</i></u>
 		<p>Automated theorem proving is an infrastructure technology for effective
 		vulnerability scanning and fuzz testing. Directly employing a general-purpose
-		theorem prover, e.g., the <a href="https://github.com/Z3Prover/z3">Z3</a>
-		theorem prover, could miss a lot of optimization opportunities. We aim to
-		provide dedicated theorem provers (<a
+		theorem prover, e.g., the Z3 theorem prover, could miss a lot of optimization
+		opportunities. We aim to provide dedicated theorem provers (<a
 		href="/public_pdfs/ISSTA20-Trident.pdf">ISSTA'20a</a>, <a
 		href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a
 		href="/public_pdfs/OOPSLA21.pdf">OOPSLA'21</a>), particularly taking advantage
@@ -140,7 +147,7 @@ Technology.</p>
 		the quality of theorem provers (<a
 		href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
 		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>) and have discovered <a
-		href="https://smtfuzz.github.io/">hundreds of bugs</a> in Z3 and CVC4.</p>
+		href="https://smtfuzz.github.io/">hundreds of bugs</a>.</p>
 	</li>
 </ul>
 
