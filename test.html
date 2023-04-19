@@ -81,10 +81,11 @@ Nanjing University and the Hong Kong University of Science and Technology.</p>
 		href="https://global.alipay.com/platform/site/ihome">Alipay</a>, a popular
 		digital payment app with over a billion monthly active users. Interested readers
 		can refer to my <a style="color:black" href="/public_pdfs/thesis.pdf">doctoral
-		dissertation</a> as well as follow-up works on sparse dataflow analysis (<a
-		href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <span class="sp1"
+		dissertation</a> as well as follow-up works on path-sensitive sparse dataflow
+		analysis (<a href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <span class="sp1"
 		style="display:none"><a href="/public_pdfs/ICSE2020a.pdf">ICSE'20a</a>, <a
-		href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>,</span> <a
+		href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>, <a
+		href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>,</span> <a
 		href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a
 		href="/public_pdfs/OOPSLA21.pdf">OOPSLA'21</a>, <a
 		href="/public_pdfs/OOPSLA22-FLARE.pdf">OOPSLA'22a</a>, <span class="sp1"
@@ -109,10 +110,10 @@ Nanjing University and the Hong Kong University of Science and Technology.</p>
 		logical reasoning how a previously made software accomplishes a task with very
 		little insight into exactly how it does so. We reverse engineer, or disassemble,
 		binary code into assembly code (<a
-		href="/public_pdfs/SP23DARM.pdf">S&amp;P'23</a>); we reverse engineer software
-		implementations to obtain the specification of input formats and state machines.
-		We expect to use these techniques to facilitate automated security analysis such
-		as vulnerability scanning and fuzz testing. To date, we have discovered <a
+		href="/public_pdfs/SP23DARM.pdf">S&amp;P'23</a>); we reverse engineer network
+		implementations to obtain the specification of protocol formats and state
+		machines. We expect to use these techniques to facilitate automated security
+		analysis such as bug scanning and fuzz testing. To date, we have discovered <a
 		href="/Reverse_Engineering.html">many zero-day vulnerabilities</a> through these
 		techniques.</p>
 	</li>
@@ -134,26 +135,22 @@ Nanjing University and the Hong Kong University of Science and Technology.</p>
 		href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
 		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>, <a href=""
 		onclick="show_list('sp3'); return false;">…</a>). We received the Google
-		Research Paper Reward and two Huawei Distinguished Collaborator Awards for
-		deploying our fuzzers.</p>
+		Research Paper Reward and, by fuzzing, have discovered <a
+		href="https://smtfuzz.github.io/">hundreds of bugs</a> in state-of-the-art
+		constraint solvers.</p>
 	</li>
-
-	<li><u><i>Static Analysis for Theorem Proving</i></u>
-		<p>Automated theorem proving is an infrastructure technology for effective
-		vulnerability scanning and fuzz testing. Directly employing a general-purpose
-		theorem prover, e.g., the Z3 theorem prover, could miss a lot of optimization
-		opportunities. We aim to provide dedicated theorem provers (<a
-		href="/public_pdfs/ISSTA20-Trident.pdf">ISSTA'20a</a>, <a
-		href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a
-		href="/public_pdfs/OOPSLA21.pdf">OOPSLA'21</a>), particularly taking advantage
-		of program semantics to make a theorem prover faster and, in turn, improve the
-		vulnerability scanners and fuzz testers. We also utilze fuzz testing to ensure
-		the quality of theorem provers (<a
-		href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
-		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>) and have discovered <a
-		href="https://smtfuzz.github.io/">hundreds of bugs</a>.</p>
-	</li>
-</ul>
+	<!--
+<li><u><i>Static Analysis for Theorem Proving</i></u>
+<p>
+Automated theorem proving is an infrastructure technology for effective vulnerability scanning and fuzz testing.
+Directly employing a general-purpose theorem prover, e.g., the Z3 theorem prover, could miss a lot of optimization opportunities.
+We aim to provide dedicated theorem provers ("ISSTA'20a":[/public_pdfs/ISSTA20-Trident.pdf], "PLDI'21":[/public_pdfs/PLDI21-Fusion.pdf], "OOPSLA'21":[/public_pdfs/OOPSLA21.pdf]),
+particularly taking advantage of program semantics to make a theorem prover faster and, in turn,
+improve the vulnerability scanners and fuzz testers.
+We also utilze fuzz testing to ensure the quality of theorem provers ("ISSTA'21":[/public_pdfs/ISSTA2021.pdf], "ESEC/FSE'21":[/public_pdfs/FSE21.pdf]) and have discovered "hundreds of bugs":[https://smtfuzz.github.io/].
+</p>
+</li>
+--></ul>
 
 <div><br />
 </div>
