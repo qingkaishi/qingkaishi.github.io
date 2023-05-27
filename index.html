@@ -18,8 +18,8 @@
 <center>
 	<div id="content" style="height: auto;">
 		<div id="photo" style="width:180px;float:left;margin-left:80px;"
-		class="figure"><img src="images/sqk.jpg" alt="" width="160" height="210"
-		/></div>
+		class="figure"><img src="images/sqk2.jpg" alt="" title="Miami Beach, FL 2023"
+		width="160" height="210" /></div>
 
 		<div id="name1" style="font-size: 20px;"><strong>Qingkai Shi, Ph.D.</strong><br
 		/>
@@ -57,25 +57,35 @@
 	<hr />
 </div>
 
-<p><br />
-Qingkai Shi is a Postdoctoral Research Associate in the department of computer
-science at Purdue University. His major research interests focus on the use of
-compiler techniques, especially static analysis, to rigorously ensure software
-security. He has published extensively at premium venues of programming
-languages (PLDI, OOPSLA), software engineering (ICSE, FSE), and cybersecurity
-(S&amp;P, CCS). His research received many awards including ACM SIGPLAN
-Distinguished Paper Award, ACM SIGSOFT Distinguished Paper Award, Google
+<div><br />
+</div>
+<!--
+<div style="margin-bottom: 2rem; background-color: #eceeef; border-radius: 0.3rem; padding: 2rem; padding-top: 18px; padding-bottom: 10px; font-size: 14px">
+<p>
+<i><b>
+If you like programming and are interested in compilers or compiler-driven security techniques, send me emails for PostDoc, Ph.D., Master, and RA positions. Bachelor's thesis topics are also available for undergraduates.
+</b></i>
+</p>
+</div>
+-->
+<p>Qingkai Shi is a Postdoctoral Research Associate in the Department of
+Computer Science at Purdue University. His major research interests focus on the
+use of compiler techniques, especially static analysis, to rigorously ensure
+software security. He has published extensively at premium venues of programming
+languages (PLDI, OOPSLA), software engineering (ICSE, ESEC/FSE), and
+cybersecurity (S&amp;P, CCS). His research received many awards including ACM
+SIGPLAN Distinguished Paper Award, ACM SIGSOFT Distinguished Paper Award, Google
 Research Paper Reward, and Hong Kong Ph.D. Fellowship. His research has led to
 the discovery of hundreds of zero-day software vulnerabilities and has been
-successfully commercialized in Sourcebrella Inc. Qingkai obtained his B.S. and
-Ph.D. from Nanjing University and the Hong Kong University of Science and
-Technology.</p>
+successfully commercialized in Sourcebrella Inc, acquired by Ant Group. Qingkai
+obtained his B.S. and Ph.D. from Nanjing University and the Hong Kong University
+of Science and Technology.</p>
 
 <ul style="margin-right: 5mm">
-	<li><u><i>Static Analysis for Bug Scanning</i></u>
-		<p>Pinpoint is an industrial-strength automated software vulnerability scanner.
-		It has found <a href="/catapult.html">hundreds of bugs</a>, including many CVEs,
-		in mature systems. It has been successfully commercialized at Sourcebrella Inc
+	<li><b>Static Analysis for Bug Scanning</b>
+		<p>Pinpoint is an industrial-strength automated software bug scanner. It has
+		found <a href="/catapult.html">hundreds of bugs</a>, including many CVEs, in
+		mature systems. It has been successfully commercialized at Sourcebrella Inc
 		(acquired by <a style="color:black" href="https://www.antgroup.com/en">Ant
 		Group</a> in 2020) and deployed in daily operations for improving the quality of
 		<a style="color:black"
@@ -106,30 +116,32 @@ Technology.</p>
 		Distinguished Paper Awards for these works.</p>
 	</li>
 
-	<li><u><i>Static Analysis for Reverse Engineering</i></u>
+	<li><b>Static Analysis for Reverse Engineering</b>
 		<p>Reverse engineering by static program analysis attempts to understand through
 		logical reasoning how a previously made software accomplishes a task with very
 		little insight into exactly how it does so. We reverse engineer machine code for
 		binary analysis (<a href="/public_pdfs/SP23DARM.pdf">S&amp;P'23</a>, <a
-		href="/#">ISSTA'23</a>, <a href="/#">ESEC/FSE'23</a>); we reverse engineer
-		network implementations to obtain the specification of protocol formats and
-		state machines (<a href="/public_pdfs/CCS23draft.pdf">CCS'23</a>, <a
+		href="/public_pdfs/ISSTA23draft.pdf">ISSTA'23</a>, <a
+		href="/public_pdfs/FSE23draft.pdf">ESEC/FSE'23</a>); we reverse engineer network
+		implementations to obtain the specification of protocol formats and state
+		machines (<a href="/public_pdfs/CCS23draft.pdf">CCS'23</a>, <a
 		href="/public_pdfs/SEC23draft.pdf">Security'23</a>). We expect to use these
 		techniques to facilitate automated security analysis such as bug scanning and
 		fuzz testing. To date, we have discovered <a href="/Reverse_Engineering.html">many
 		zero-day vulnerabilities</a> through these techniques.</p>
 	</li>
 
-	<li><u><i>Static Analysis for Fuzz Testing</i></u>
+	<li><b>Static Analysis for Fuzz Testing</b>
 		<p>Fuzz testing is powerful for revealing security loopholes in software,
-		networks, or operating systems. We are interested in leveraging static analysis
-		techniques, particularly, abstract interpretation, to make general fuzzers more
-		efficient (<a href="/public_pdfs/SP2020.pdf">S&amp;P'20</a>, <a
+		networks, or operating systems. We are interested in leveraging static program
+		analysis techniques, particularly, abstract interpretation, to make a general
+		fuzzer more effective and efficient (<a
+		href="/public_pdfs/SP2020.pdf">S&amp;P'20</a>, <a
 		href="/public_pdfs/SP22.pdf">S&amp;P'22</a><img src="images/award.gif"
 		style="height:1em" />). We are also interested in applying fuzzers to
-		domain-specific application scenarios, including testing deep neural networks,
-		testing multi-threading programs, testing complex systems such as constraint
-		solvers, network systems, and more (<span class="sp3" style="display:none"><a
+		domain-specific application scenarios, including compilers or interpreters,
+		constraint solvers or theorem provers, internet of things or network systems, to
+		name a few (<span class="sp3" style="display:none"><a
 		href="/public_pdfs/TR2016.pdf">TRel'16</a>, <a
 		href="/public_pdfs/TSE2016.pdf">TSE'16</a>, </span><a
 		href="/public_pdfs/ISSTA20-DeepGini.pdf">ISSTA'20d</a>, <a
@@ -140,21 +152,7 @@ Technology.</p>
 		href="https://smtfuzz.github.io/">hundreds of bugs</a> in state-of-the-art
 		constraint solvers.</p>
 	</li>
-	<!--
-<li><u><i>Static Analysis for Theorem Proving</i></u>
-<p>
-Automated theorem proving is an infrastructure technology for effective vulnerability scanning and fuzz testing.
-Directly employing a general-purpose theorem prover, e.g., the Z3 theorem prover, could miss a lot of optimization opportunities.
-We aim to provide dedicated theorem provers ("ISSTA'20a":[/public_pdfs/ISSTA20-Trident.pdf], "PLDI'21":[/public_pdfs/PLDI21-Fusion.pdf], "OOPSLA'21":[/public_pdfs/OOPSLA21.pdf]),
-particularly taking advantage of program semantics to make a theorem prover faster and, in turn,
-improve the vulnerability scanners and fuzz testers.
-We also utilze fuzz testing to ensure the quality of theorem provers ("ISSTA'21":[/public_pdfs/ISSTA2021.pdf], "ESEC/FSE'21":[/public_pdfs/FSE21.pdf]) and have discovered "hundreds of bugs":[https://smtfuzz.github.io/].
-</p>
-</li>
---></ul>
-
-<div><br />
-</div>
+</ul>
 
 <!-- by Texy2! -->      </div>
     </div>
