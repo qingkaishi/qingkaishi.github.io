@@ -21,41 +21,41 @@ var browser = {
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
 };
 
-function testmobile() {
+function complete_load() {
     if (browser.versions.mobile) {
-        var info = document.getElementById('info');
+        let info = document.getElementById('info');
         if (info) {
             info.style.clear = 'both';
         }
 
-        var container = document.getElementById('container');
+        let container = document.getElementById('container');
         if (container) {
             container.style.width = '100%';
         }
 
-        var pho = document.getElementById('photo');
+        let pho = document.getElementById('photo');
         if (pho) {
             pho.style.display = 'none';
         }
 
-        var name1 = document.getElementById('name1');
+        let name1 = document.getElementById('name1');
         if (name1) {
             name1.style.display = 'none';
         }
 
-        var name2 = document.getElementById('name2');
+        let name2 = document.getElementById('name2');
         if (name2) {
             name2.style.display = 'inline';
         }
 
-        var ols = document.getElementsByTagName('ol');
+        let ols = document.getElementsByTagName('ol');
         for (i = 0; i < ols.length; ++i) {
             var ol = ols[i];
             ol.style.margin_left = 0;
             ol.style.padding = '0 0 0 15px';
             ol.style.list_style_position = 'inside';
         }
-        var uls = document.getElementsByTagName('ul');
+        let uls = document.getElementsByTagName('ul');
         for (i = 0; i < uls.length; ++i) {
             var ul = uls[i];
             ul.style.margin_left = 0;
@@ -63,8 +63,8 @@ function testmobile() {
             ul.style.list_style_position = 'inside';
         }
     }
-    var domain = document.domain;
-    var footer = document.getElementById('footer');
+    let domain = document.domain;
+    let footer = document.getElementById('footer');
     if (domain.indexOf("qingkaishi.github.io") >= 0) {
         var edit = document.getElementById('edit');
         if (edit) {
@@ -72,13 +72,10 @@ function testmobile() {
         }
 
         if (footer) {
-            footer.innerHTML +=
-                "<a href='/#' title='Visit tracker' id='tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'/></a>"
-        }
-    } else if (domain.indexOf("localhost") >= 0) {
-        if (footer) {
-            footer.innerHTML +=
-                "<a href='https://clustrmaps.com/site/1a3c7' title='Visit tracker' id='tracker'><img src='images/map_v2.png'/></a>"
+            let tracker_link = document.getElementById('tracker-link')
+            let tracker_image = document.getElementById('tracker-img')
+            tracker_link.href = '/#'
+            tracker_image.src = '//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'
         }
     }
 }
