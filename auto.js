@@ -38,16 +38,6 @@ function complete_load() {
             pho.style.display = 'none';
         }
 
-        let name1 = document.getElementById('name1');
-        if (name1) {
-            name1.style.display = 'none';
-        }
-
-        let name2 = document.getElementById('name2');
-        if (name2) {
-            name2.style.display = 'inline';
-        }
-
         let ols = document.getElementsByTagName('ol');
         for (i = 0; i < ols.length; ++i) {
             var ol = ols[i];
