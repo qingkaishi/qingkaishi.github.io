@@ -41,3 +41,99 @@ form div.edit-block{padding:1em 0}
 .tg tr:hover {background-color: #ddd;}
 .tg th {padding-top: 8px; padding-bottom: 8px; text-align: left; background-color: gray; color: white;}
 .tg th:nth-child(5), td:nth-child(5) { display: none }
+
+.purple_label{
+    background-color: #552583;
+    border-radius: 50px;
+    text-align:center;
+    color:white;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.green_label{
+    background-color: #3d7a7a;
+    border-radius: 50px;
+    text-align:center;
+    color:white;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.gray_label{
+    background-color: #555555;
+    border-radius: 50px;
+    text-align:center;
+    color:white;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.blue_label{
+    background-color: #3e83aa;
+    border-radius: 50px;
+    text-align:center;
+    color:white;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.red_label{
+    background-color: #9f262c;
+    border-radius: 50px;
+    text-align:center;
+    color:white;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.light_blue_label{
+    background-color: #aec0fb;
+    border-radius: 50px;
+    text-align:center;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.light_green_label{
+    background-color: #bfe1e2;
+    border-radius: 50px;
+    text-align:center;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.dark_gray_label{
+    background-color: #cccccc;
+    border-radius: 50px;
+    text-align:center;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.dark_blue_label{
+    background-color: #1f0a4c;
+    border-radius: 50px;
+    text-align:center;
+    color:white;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}
+
+.dark_pink_label{
+    background-color: #e8ac92;
+    border-radius: 50px;
+    text-align:center;
+    display: inline;
+    font-size: x-small;
+    padding: 3px 3px 5px 5px;
+}

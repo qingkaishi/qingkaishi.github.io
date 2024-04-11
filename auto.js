@@ -52,6 +52,12 @@ function complete_load() {
             ul.style.padding = '0 0 0 15px';
             ul.style.list_style_position = 'inside';
         }
+
+        let tags = document.getElementsByClassName('tag');
+        for (i = 0; i < tags.length; ++i) {
+            var tag = tags[i];
+            tag.style.display = 'none'
+        }
     }
     let domain = document.domain;
     let footer = document.getElementById('footer');
