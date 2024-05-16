@@ -42,6 +42,14 @@ form div.edit-block{padding:1em 0}
 .tg th {padding-top: 8px; padding-bottom: 8px; text-align: left; background-color: gray; color: white;}
 .tg th:nth-child(5), td:nth-child(5) { display: none }
 
+.vl {
+    border-left: 1px solid lightgrey;
+    height: 80px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
 .purple_label{
     background-color: #552583;
     border-radius: 50px;
