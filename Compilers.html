@@ -61,9 +61,10 @@ fundamental programming languages such as C/C++ and Java.</p>
 
 <h2 id="toc-lectures">Lectures</h2>
 
-<p>The course slides are as follows. They cover most but selective parts of the
-Dragon Book, with Chapter 11 intentionally excluded. Contact the instructor if
-you have any questions or suggestions.</p>
+<p>The course slides are listed below. They cover most but selective parts of
+the Dragon Book, with Chapter 11 intentionally excluded and much more not
+covered in the textbook. Contact the instructor if you have any questions or
+suggestions.</p>
 
 <p>The course designers deeply appreciate instructors and researchers in the
 community for their inspiring works, which provide rich materials for developing
@@ -81,33 +82,48 @@ the course slides.<br />
 	</thead>
 
 	<tr>
-		<td class="tg-0pky">Ch1/Ch2 Introduction to Compilers</td>
+		<td class="tg-0pky">Ch1/Ch2 Introduction to Compilers<br />
+		   * <i>Basic Concepts of Programming Languages and Compilers</i><br />
+	</td>
 
-		<td class="tg-0pky"><a
-		href="https://box.nju.edu.cn/f/8363454c2d64416b8eb0/">Slides</a></td>
+		<td class="tg-0pky"><br />
+		<a href="https://box.nju.edu.cn/f/8363454c2d64416b8eb0/">Slides-1</a></td>
 	</tr>
 
 	<tr>
-		<td class="tg-0pky" colspan="2"><strong>The Compilers' Front End</strong></td>
+		<td class="tg-0pky" colspan="2">
+			<center><strong>Front End</strong></center>
+		</td>
 	</tr>
 
 	<tr>
-		<td class="tg-0pky">Ch3 Lexical Analysis</td>
+		<td class="tg-0pky">Ch3 Lexical Analysis<br />
+		   * <i>Regular Language / Finite Automata / Pumping Lemma</i><br />
+		   * <i>Lexical Analysis</i></td>
 
-		<td class="tg-0pky">Slides</td>
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-1</a><br />
+		<a href="#">Slides-2</a></td>
 	</tr>
 
 	<tr>
-		<td class="tg-0pky">Ch4 Syntax Analysis</td>
+		<td class="tg-0pky">Ch4 Syntax Analysis<br />
+		   * <i>Context-Free Language / Push-Down Automata / Bar-Hillel Lemma</i><br
+		/>
+		   * <i>Top-Down Parsing / LL(k) / Bottom-up Parsing / LR(k) </i><br />
+		   * <i>Ambiguous Grammars / ANTLR</i></td>
 
-		<td class="tg-0pky">Slides</td>
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-1</a><br />
+		<a href="#">Slides-2</a><br />
+		<a href="#">Slides-3</a></td>
 	</tr>
 
 	<tr>
 		<td class="tg-0pky">Ch5/Ch6 Intermediate Representation<br />
-		   <i>Three Address Code / Syntax-Directed Definition / IR Generation</i><br
-		/>
-		   <i>Translation into SSA / LLVM IR</i></td>
+		   * <i>Three Address Code / Syntax-Directed Definition / IR
+		Generation</i><br />
+		   * <i>Translation into SSA / LLVM IR</i></td>
 
 		<td class="tg-0pky"><br />
 		<a href="https://box.nju.edu.cn/f/3df10fbbf20541f1bed3/">Slides-1</a><br />
@@ -115,14 +131,17 @@ the course slides.<br />
 	</tr>
 
 	<tr>
-		<td class="tg-0pky" colspan="2"><strong>The Compilers' Back End</strong></td>
+		<td class="tg-0pky" colspan="2">
+			<center><strong>Back End</strong></center>
+		</td>
 	</tr>
 
 	<tr>
 		<td class="tg-0pky">Ch7/Ch8 Target Code Generation<br />
-		   <i>Memory Model / Instruction Selection / Peephole Optimization</i><br />
-		   <i>Translation out of SSA</i><br />
-		   <i>Local Register Allocation / Global Register Allocation</i></td>
+		   * <i>Memory Model / Instruction Selection / Peephole Optimization</i><br
+		/>
+		   * <i>Translation out of SSA</i><br />
+		   * <i>Local Register Allocation / Global Register Allocation</i></td>
 
 		<td class="tg-0pky"><br />
 		<a href="https://box.nju.edu.cn/f/dc3d5529ec894e6f91c3/">Slides-1</a><br />
@@ -132,26 +151,39 @@ the course slides.<br />
 
 	<tr>
 		<td class="tg-0pky">Ch10 Instruction Scheduling<br />
-		   <i>Scheduling Constraints / Local Scheduling / Global Scheduling</i></td>
+		   * <i>Scheduling Constraints / Local Scheduling / Global
+		Scheduling</i></td>
 
 		<td class="tg-0pky"><br />
-		<a href="https://box.nju.edu.cn/f/74f0cf02030640018ce4/">Slides</a></td>
+		<a href="https://box.nju.edu.cn/f/74f0cf02030640018ce4/">Slides-1</a></td>
 	</tr>
 
 	<tr>
-		<td class="tg-0pky" colspan="2"><strong>The Compilers' Middle End</strong></td>
+		<td class="tg-0pky" colspan="2">
+			<center><strong>Middle End</strong></center>
+		</td>
 	</tr>
 
 	<tr>
-		<td class="tg-0pky">Ch9 Dataflow Analysis</td>
+		<td class="tg-0pky">Ch9 Dataflow Analysis<br />
+		   * <i>Dataflow Analysis / Sparse Dataflow Analysis</i><br />
+		   * <i>Symbolic Execution / Satisfiability</i><br />
+	</td>
 
-		<td class="tg-0pky">Slides</td>
+		<td class="tg-0pky"><br />
+		<a href="https://box.nju.edu.cn/f/c2aa60827df648eea6ad/">Slides-1</a><br />
+		<a href="#">Slides-2</a></td>
 	</tr>
 
 	<tr>
-		<td class="tg-0pky">Ch12 Interprocedural Analysis</td>
+		<td class="tg-0pky">Ch12 Interprocedural Analysis<br />
+		   * <i>Context Sensitivity / IFDS / CFL-Reachability</i><br />
+		   * <i>Datalog-Based Analysis / Pointer Analysis</i><br />
+	</td>
 
-		<td class="tg-0pky">Slides</td>
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-1</a><br />
+		<a href="#">Slides-2</a></td>
 	</tr>
 </table>
 
