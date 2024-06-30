@@ -23,19 +23,24 @@ var browser = {
 
 function complete_load() {
     if (browser.versions.mobile) {
-        let info = document.getElementById('info');
-        if (info) {
-            info.style.clear = 'both';
-        }
-
         let container = document.getElementById('container');
         if (container) {
             container.style.width = '100%';
         }
 
-        let pho = document.getElementById('photo');
-        if (pho) {
-            pho.style.display = 'none';
+        let footer_container = document.getElementById('footer-container');
+        if (container) {
+            footer_container.style.width = '100%';
+        }
+
+        let sidebar = document.getElementById('sidebar');
+        if (sidebar) {
+            sidebar.style.display = 'none';
+        }
+
+        let navigation = document.getElementById('navigation');
+        if (navigation) {
+            navigation.style.display = 'block';
         }
 
         let ols = document.getElementsByTagName('ol');
@@ -73,6 +78,16 @@ function complete_load() {
             tracker_link.href = '/#'
             tracker_image.src = '//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'
         }
+    }
+
+    let main_div = document.getElementById('main')
+    let sidebar_div = document.getElementById('sidebar')
+    let main_div_height = main_div.clientHeight
+    let sidebar_div_height = sidebar_div.clientHeight
+    if (main_div_height > sidebar_div_height) {
+        sidebar_div.style.height = ""+main_div_height+"px"
+    } else {
+        main_div.style.height = ""+sidebar_div_height+"px"
     }
 }
 

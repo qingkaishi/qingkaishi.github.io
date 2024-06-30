@@ -1,5 +1,6 @@
 body{margin:0;padding:0;font:.8em/1.6 Verdana, Arial, sans-serif;text-align:center;background-color:#e6e6e6}
-#container{margin:1em auto;text-align:left;width:900px;background-color:white}
+#container{margin:1em auto 0 auto;text-align:left;width:960px;background-color:white;display: flex}
+#footer-container{margin:0 auto 1em auto;text-align:left;width:960px;background-color:white;display: flex}
 
 a{color:#09f;text-decoration:none}
 a:hover{color:#059;text-decoration:none}
@@ -8,19 +9,18 @@ a.new:hover{color:#900}
 
 #clear{display:block;clear:both}
 
-#main{clear:both;padding:35px;}
-#sidebar{float:right;width:189px;padding:0 20px 20px 0}
-#content{padding-bottom:10px;padding-top:10px}
-#footer{clear:both;text-align:center;font-size:.8em;padding:20px 0;border-top:1px solid #eee}
+#main{clear:both;padding:35px 35px 35px 35px;}
+#sidebar{background: white; height: 900px;padding: 40px 35px 30px 40px;border-right:1px solid #eee}
+#content{padding-bottom:10px;padding-top:10px;}
+#footer{background: white; width:1000px;text-align:center;font-size:.8em;padding:20px 0;border-top:1px solid #eee}
 
 p#title, h1, h2, h3, h4, h5, h6{font-family:"Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif}
 p#title{font-size:30px;margin-top:.5em;font-weight:bold}
 p#title a, p#title a:hover{color:#09f;text-decoration:none}
 
-#sidebar ul.sidebar-list, #sidebar .sidebar-list li{margin:0;padding:0;list-style:none}
-#sidebar ul.sidebar-list{margin-left:10px}
-#sidebar .sidebar-list li{margin:.5em 0;font-size:.92em}
-#sidebar .modified em{font-size:.95em}
+#sidebar ul.author-urls{list-style:none !important;padding: 0 0 0 1px;}
+#sidebar li{padding: 10px 0 0 0;}
+#sidebar a{color: black;}
 
 #toc{border-top:1px solid #eee;margin:20px 0 0;padding:20px 0 0;font-size:.95em}
 #toc h3{margin:0 0 0 10px;font-size:1.3em}
