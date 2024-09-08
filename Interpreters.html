@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Qingkai Shi's Homepage</title>
+<meta name="keywords" content="Qingkai Shi, QingkaiShi, Pinpoint, Static Code Analyzer, Program Analysis and Testing">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+<link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+<link href="fontawesome/css/brands.css" rel="stylesheet">
+<link href="fontawesome/css/solid.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+<link href="style.css" rel="stylesheet">
+<script src="auto.js"></script>
+</head>
+<body>
+  <div id="container"><div id="main">
+	
+    <h1>Interpreters</h1>
+    <div id="content">
+<p>The course designers and instructors deeply appreciate researchers in the
+community for their inspiring works, which provide rich materials for developing
+the course and advancing the research in this direction.<br />
+<br />
+<a href="/">Back to Homepage</a> · <a href="/Teaching.html">Previous Page</a></p>
+
+<hr />
+<br />
+
+<div style="float:right; display:inline-block; margin:25px 15px 0 15px"><img
+src="/images/interpreters.jpg" width="180px" /><br />
+<!-- <strong>Fig 1. The textbook.</strong> --></div>
+
+<p>Welcome to the course on Interpreters and Virtual Machines! This course
+delves into the fascinating world of how programs are executed in another way,
+focusing on interpreted execution rather than compiled execution (which should
+be studied in the course known as <a href="/Compilers.html">Compilers</a>). An
+interpreter or virtual machine, like the Python interpreter and the Java virtual
+machine, creates a simulated environment in which programs can run, providing
+benefits like platform independence and enhanced security. This course will
+guide you through the architecture of interpreters and virtual machines,
+including popular examples like the tree-walk interpreter and Java Virtual
+Machine (JVM).By the end of this course, you’ll have a deep understanding of
+how interpreters and virtual machines function and how they are used to execute
+code efficiently and securely. This knowledge is essential for anyone interested
+in the inner workings of programming languages, software development, or
+computer architecture.</p>
+
+<p><strong>Prerequisites</strong>: Before registering for this course, a student
+must check if he has basic knowledge of compilers and the C/C++ and Java
+programming languages.</p>
+
+<h2 id="toc-lectures">Lectures</h2>
+
+<p>The course slides are provided in the table below. If you have any questions
+or suggestions, please feel free to reach out to the instructor or teaching
+assistants. The course designers sincerely thank the instructors and researchers
+in the community whose inspiring work has contributed valuable material for
+these slides.<br />
+<br />
+</p>
+
+<table id="course-isre" class="tg" style="width:100%">
+	<thead>
+		<tr>
+			<th class="tg-fymr">
+				<center>Weeks</center>
+			</th>
+
+			<th class="tg-fymr">Lectures</th>
+
+			<th class="tg-fymr">Materials</th>
+		</tr>
+	</thead>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>1</center>
+		</td>
+
+		<td class="tg-0pky">Introduction to Interpreters and Virtual Machines<br />
+		   * <i>Basic concepts of programming languages, compilers, interpreters, and
+		VM</i><br />
+	</td>
+
+		<td class="tg-0pky"><br />
+		<a href="https://box.nju.edu.cn/f/67de746bdfe94fe3a544/">Slides-1</a></td>
+	</tr>
+	<!-- - -->
+	<tr>
+		<td class="tg-0pky" colspan="3">
+			<center><strong>Tree-Walk Interpreter</strong></center>
+		</td>
+	</tr>
+	<!-- - -->
+	<tr>
+		<td class="tg-0pky">
+			<center>2</center>
+		</td>
+
+		<td class="tg-0pky">Generating the Syntax Tree<br />
+		   * <i>Introduction to <a href="https://github.com/qingkaishi/minijava">the
+		mini Java language</a></i><br />
+		   * <i>Review of the lexical and syntax analysis</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="https://box.nju.edu.cn/f/06c930ccfb944e49b71d/">Slides-2</a><br />
+		<a href="https://box.nju.edu.cn/f/b594ff0957aa4ed988ea/">Slides-3</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>3</center>
+		</td>
+
+		<td class="tg-0pky">Expressions and Statements<br />
+		   * <i>Evaluating expressions / Dynamic typing</i><br />
+		   * <i>Evaluating statements / Global and local variables / Scoping</i><br
+		/>
+		   * <strong>Lab 1:</strong> Hello, my tree-walk interpreter!</td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-4</a><br />
+		<a href="#">Slides-5</a><br />
+		<a href="#">Lab-1</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>4</center>
+		</td>
+
+		<td class="tg-0pky">Control Flows and Functions<br />
+		   * <i>Conditional execution / Loops</i><br />
+		   * <i>Function declaration, definition, invocation, and return</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-6</a><br />
+		<a href="#">Slides-7</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>5</center>
+		</td>
+
+		<td class="tg-0pky">Object-Oriented Programming<br />
+		   * <i>Class declaration and definition</i><br />
+		   * <i>Constructors / Creating and using instances </i><br />
+		   * <strong>Lab 2:</strong> Enhancing the tree-walk interpreter.</td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-8</a><br />
+		<a href="#">Slides-9</a><br />
+		<a href="#">Lab-2</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>6</center>
+		</td>
+
+		<td class="tg-0pky">Inheritance and Polymorphism<br />
+		   * <i>Super- and sub- classes</i><br />
+		   * <i>Invoking virtual functions</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-10</a><br />
+		<a href="#">Slides-11</a></td>
+	</tr>
+	<!-- - -->
+	<tr>
+		<td class="tg-0pky" colspan="3">
+			<center><strong>Java Virtual Machine</strong></center>
+		</td>
+	</tr>
+	<!-- - -->
+	<tr>
+		<td class="tg-0pky">
+			<center>7</center>
+		</td>
+
+		<td class="tg-0pky">Introduction to Java Virtual Machine<br />
+		   * <i>Java bytecode / Basic structure of OpenJDK</i><br />
+		   * <i>The First Attempt of Hacking JVM</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-12</a><br />
+		<a href="#">Slides-13</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>8</center>
+		</td>
+
+		<td class="tg-0pky">Object Model and Class Loader<br />
+		   * <i>Object and class representation in JVM</i><br />
+		   * <i>Loading, initializing, using, and unloading classes</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-14</a><br />
+		<a href="#">Slides-15</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>9</center>
+		</td>
+
+		<td class="tg-0pky">Template Interpreter<br />
+		   * <i>Architecture of the interpreter / machine code template </i><br />
+		   * <i>Code cache / interpreter generation</i><br />
+		   * <strong>Lab 3:</strong> Enriching the Java bytecode instruction
+		set.</td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-16</a><br />
+		<a href="#">Slides-17</a><br />
+		<a href="#">Lab-3</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>10</center>
+		</td>
+
+		<td class="tg-0pky">Memory Management<br />
+		   * <i>VM memory structure / Runtime space allocation </i><br />
+		   * <i>Garbage collection and its optimization</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-18</a><br />
+		<a href="#">Slides-19</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>11</center>
+		</td>
+
+		<td class="tg-0pky">Dealing with Exceptions<br />
+		   * <i>Context of exceptions / local and remote exceptions</i><br />
+		   * <i>Stack trace / Control transference</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-20</a><br />
+		<a href="#">Slides-21</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>12</center>
+		</td>
+
+		<td class="tg-0pky">Linker and Native Interfaces<br />
+		   * <i>Verification, preparation, and resolution / Linking methods</i><br />
+		   * <i>JNI / Communications between Java and JVM</i><br />
+		   * <strong>Lab 4:</strong> Reshaping the Java native interfaces.</td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-22</a><br />
+		<a href="#">Slides-23</a><br />
+		<a href="#">Lab-4</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>13</center>
+		</td>
+
+		<td class="tg-0pky">Threading Model<br />
+		   * <i>Mapping VM threads to OS threads / Synchronization components / GC
+		support</i><br />
+		   * <i>Optimizing synchronization / Transactions</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-24</a><br />
+		<a href="#">Slides-25</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>14</center>
+		</td>
+
+		<td class="tg-0pky">Just-in-Time Compilation – I<br />
+		   * <i>Bytecode → High-level IR (HIR) → Low-level IR (LIR) </i><br />
+		   * <i>HIR and LIR optimizations</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-26</a><br />
+		<a href="#">Slides-27</a></td>
+	</tr>
+
+	<tr>
+		<td class="tg-0pky">
+			<center>15</center>
+		</td>
+
+		<td class="tg-0pky">Just-in-Time Compilation – II<br />
+		   * <i>Sea-of-node IR and optimizations</i><br />
+		   * <i>GC support and deoptimizations</i><br />
+		   * <strong>Lab 5:</strong> One more optimization.</td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-28</a><br />
+		<a href="#">Slides-29</a><br />
+		<a href="#">Lab-5</a></td>
+	</tr>
+	<!-- - -->
+	<tr>
+		<td class="tg-0pky" colspan="3">
+			<center><strong>Conclusion</strong></center>
+		</td>
+	</tr>
+	<!-- - -->
+	<tr>
+		<td class="tg-0pky">
+			<center>16</center>
+		</td>
+
+		<td class="tg-0pky">Concluding the Course<br />
+		   * <i>Review of the lectures and the labs</i></td>
+
+		<td class="tg-0pky"><br />
+		<a href="#">Slides-30</a></td>
+	</tr>
+</table>
+
+<div><br />
+</div>
+
+<h2 id="toc-grading-scheme">Grading Scheme</h2>
+
+<p>Labs (50%) + Exam (50%)</p>
+
+<h2 id="toc-teaching-assistants">Teaching Assistants</h2>
+
+<p>(TBA)</p>
+
+<h2 id="toc-online-discussion">Online Discussion</h2>
+
+<p>(TBA)</p>
+
+<h2 id="toc-office-hours">Office Hours</h2>
+
+<p>By appointment. Feel free to email TAs or the instructors to claim a
+time slot.</p>
+
+<div><br />
+</div>
+
+<!-- by Texy2! -->      </div>
+    </div></div>
+    <div id="footer-container">
+        <div id="footer">
+             Copyright 2024 Qingkai Shi. Last modified: 2024.09. <br>
+			 <div id="edit">
+             <a href="./?edit=Interpreters">Edit page</a> |
+             <a href="./cv.php" target="_blank">Edit resume</a> |
+             <a href="./fileupload.php" target="_blank">Upload files</a> |
+             <a href="./?edit=">Create new page</a> <br>
+			 </div>
+			 <br>
+
+			 <a href='https://clustrmaps.com/site/1a3c7' title='Visit tracker' id='tracker-link'>
+			    <img src='images/map_v2.png' id='tracker-img'/>
+			 </a>
+			 <div class="vl"></div>
+			 <img src='images/QR.jpg' height=90px id='weixin-img'/>
+        </div>
+		<style onload="complete_load()"></style>
+    </div>
+</body>
+</html>
