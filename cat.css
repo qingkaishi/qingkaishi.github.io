@@ -10,9 +10,9 @@
 
 /* Create four equal columns that sits next to each other */
 .cat-column {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  max-width: 30%;
+  -ms-flex: 32%; /* IE10 */
+  flex: 32%;
+  max-width: 33%;
   padding: 0 4px;
 }
 
