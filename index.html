@@ -102,13 +102,12 @@
 
 <div id="bio" style="margin: 0 0 .5rem 0">Qingkai Shi is an associate professor
 in the School of Computer Science at Nanjing University. His research focuses on
-the use of compiler techniques, especially static program analysis, to
-rigorously ensure software security. He has published extensively at premium
-venues of programming languages (PLDI, OOPSLA), cybersecurity (SP, CCS), and
-software engineering (ICSE, ESEC/FSE). His research received many awards,
-including two ACM SIGPLAN Distinguished Paper Awards, two ACM SIGSOFT
-Distinguished Paper Awards, a Google Research Paper Reward, and <a
-style="color:black" href="/public_pdfs/HKPFS.pdf">the Hong Kong Ph.D.
+the use of compiler techniques, especially formal program analysis, to
+rigorously ensure software and network security. He has published extensively at
+premium venues of programming languages (PLDI, OOPSLA), cybersecurity (SP, CCS),
+and software engineering (ICSE, ESEC/FSE). His research has received four ACM
+SIGPLAN or SIGSOFT Distinguished Paper Awards, one Google Research Paper Award,
+and <a style="color:black" href="/public_pdfs/HKPFS.pdf">the Hong Kong Ph.D.
 Fellowship</a>.</div>
 
 <div id="bio" style="margin: 0 0 1.5rem 0">Qingkai obtained his Ph.D. from the
@@ -117,114 +116,94 @@ where his research was commercialized. He then moved to Ant Group, which
 acquired Sourcebrella. Qingkai also enjoyed a wonderful period as a postdoctoral
 researcher at Purdue University, West Lafayette, the United States.</div>
 
-<ul style="margin-right: 5mm;padding-inline-start:18px">
-	<li style="margin: 0 0 1.5rem 0"><b>Static Analysis for Bug Scanning</b>
-		<p>Pinpoint is an industrial-strength automated software bug scanner. It has
-		found hundreds of vulnerabilities with many CVEs in mature systems<a
-		style="color:black" href="/catapult.html"> <i
-		class="fa-solid fa-square-up-right fa-xs"></i></a>. It was successfully
-		commercialized at Sourcebrella LLC, which was acquired by <a style="color:black"
-		href="https://www.antgroup.com/en">Ant Group</a> in 2020 for improving the
-		quality of many products such as <a style="color:black"
-		href="https://global.alipay.com/platform/site/ihome">Alipay</a>, a popular
-		digital payment app with over a billion monthly active users. Interested readers
-		can refer to this <a style="color:black" href="/public_pdfs/thesis.pdf">doctoral
-		dissertation</a> as well as follow-up works on path-sensitive sparse dataflow
-		analysis (<a href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <span class="sp1"
-		style="display:none"><a href="/public_pdfs/ICSE2020a.pdf">ICSE'20a</a>, <a
-		href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>, <a
-		href="/public_pdfs/ISSTA20-Trident.pdf">ISSTA'20a</a>,</span> <a
-		href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a
-		href="/public_pdfs/OOPSLA22-FLARE.pdf">OOPSLA'22a</a>, <span class="sp1"
-		style="display:none"><a href="/public_pdfs/TOSEM23.pdf">TOSEM'23</a>, <a
-		href="/public_pdfs/ICSE24.pdf">ICSE'24</a>,</span> <a
-		href="/public_pdfs/PLDI24.pdf">PLDI'24</a>, <a href=""
-		onclick="show_list('sp1'); return false;">…</a>) and approaches to detecting
-		specific bug types (<span class="sp2" style="display:none"><a
-		href="/public_pdfs/ICSE2019.pdf">ICSE'19</a>, <a
-		href="/public_pdfs/ISSTA20-VeriBuild.pdf">ISSTA'20b</a>, <a
-		href="/public_pdfs/ISSTA20-CCD.pdf">ISSTA'20c</a>, </span><a
-		href="/public_pdfs/OOPSLA21.pdf">OOPSLA'21</a>, <a
-		href="/public_pdfs/OOPSLA22Cres.pdf">OOPSLA'22b</a>, <span class="sp2"
-		style="display:none"><a href="/public_pdfs/ICSE22.pdf">ICSE'22</a>, <a
-		href="/public_pdfs/FSE22.pdf">ESEC/FSE'22</a>, <a
-		href="/public_pdfs/SP2024.pdf">SP'24</a>, <a
-		href="https://ieeexplore.ieee.org/document/10689456">TSE'24</a>, <a
-		href="/public_pdfs/ICSE25.pdf">ICSE'25</a>,</span> <a href=""
-		onclick="show_list('sp2'); return false;">…</a>). Two ACM Distinguished Paper
-		Awards were awarded for these studies.</p>
+<h2 id="toc-software-security-analysis">Software Security Analysis</h2>
 
-		<p><img src="/images/key.png" width="18px" /> <i>Keywords</i>: path-sensitive
-		and sparse analysis, memory safety analysis, taint analysis.</p>
-	</li>
+<p>Static bug scanners automatically detect coding errors and security flaws in
+software before execution. Pinpoint, an industrial-strength bug scanner, has
+found numerous vulnerabilities with many CVEs in mature systems<a
+style="color:black" href="/catapult.html"> <i
+class="fa-solid fa-square-up-right fa-xs"></i></a>. It was successfully
+commercialized at Sourcebrella LLC, which was acquired by <a style="color:black"
+href="https://www.antgroup.com/en">Ant Group</a> for improving the quality of
+many products such as <a style="color:black"
+href="https://global.alipay.com/platform/site/ihome">Alipay</a>, a digital
+payment app with over a billion monthly active users. Interested readers can
+refer to Qingkai's <a style="color:black"
+href="/public_pdfs/thesis.pdf">doctoral dissertation</a> as well as many
+follow-up works on this topic, particularly, path-sensitive sparse dataflow
+analysis (<a href="/public_pdfs/PLDI2018.pdf">PLDI'18</a>, <span class="sp1"
+style="display:none"><a href="/public_pdfs/ICSE2020a.pdf">ICSE'20a</a>, <a
+href="/public_pdfs/ICSE2020b.pdf">ICSE'20b</a>, <a
+href="/public_pdfs/ISSTA20-Trident.pdf">ISSTA'20a</a>,</span> <a
+href="/public_pdfs/PLDI21-Fusion.pdf">PLDI'21</a>, <a
+href="/public_pdfs/OOPSLA22-FLARE.pdf">OOPSLA'22a</a>, <span class="sp1"
+style="display:none"><a href="/public_pdfs/TOSEM23.pdf">TOSEM'23</a>, <a
+href="/public_pdfs/ICSE24.pdf">ICSE'24</a>,</span> <a
+href="/public_pdfs/PLDI24.pdf">PLDI'24</a>, <a href=""
+onclick="show_list('sp1'); return false;">…</a>) as well as approaches to
+detecting specific bug types (<span class="sp2" style="display:none"><a
+href="/public_pdfs/ICSE2019.pdf">ICSE'19</a>, <a
+href="/public_pdfs/ISSTA20-VeriBuild.pdf">ISSTA'20b</a>, <a
+href="/public_pdfs/ISSTA20-CCD.pdf">ISSTA'20c</a>, </span><a
+href="/public_pdfs/OOPSLA21.pdf">OOPSLA'21</a>, <a
+href="/public_pdfs/OOPSLA22Cres.pdf">OOPSLA'22b</a>, <span class="sp2"
+style="display:none"><a href="/public_pdfs/ICSE22.pdf">ICSE'22</a>, <a
+href="/public_pdfs/FSE22.pdf">ESEC/FSE'22</a>, <a
+href="https://ieeexplore.ieee.org/document/10689456">TSE'24</a>,</span> <a
+href="/public_pdfs/SP2024.pdf">SP'24</a>, <a
+href="/public_pdfs/ICSE25.pdf">ICSE'25</a>, <a href=""
+onclick="show_list('sp2'); return false;">…</a>). Two ACM Distinguished Paper
+Awards were awarded for these studies.</p>
 
-	<li style="margin: 0 0 1.5rem 0"><b>Static Analysis for Reverse Engineering</b>
-		<p>Reverse engineering by static program analysis attempts to understand through
-		logical reasoning how a previously made software accomplishes a task with very
-		little insight into exactly how it does so. The research group focuses on
-		network protocol reverse engineering to ensure network security (<a
-		href="/public_pdfs/CCS23.pdf">CCS'23</a>, <a
-		href="/public_pdfs/SEC23.pdf">SEC'23</a>, <a
-		href="/public_pdfs/OOPSLA2024.pdf">OOPSLA'24</a>, <span class="sp6"
-		style="display:none"><a href="/public_pdfs/ISSTA25.pdf">ISSTA'25</a>,</span> <a
-		href="/public_pdfs/CCS25.pdf">CCS'25</a>, <a href=""
-		onclick="show_list('sp6'); return false;">…</a>), as well as reverse
-		engineering of machine code for binary analysis (<a
-		href="/public_pdfs/SP23DARM.pdf">SP'23</a>, <span class="sp5"
-		style="display:none"><a href="/public_pdfs/ISSTA23.pdf">ISSTA'23</a>,</span> <a
-		href="/public_pdfs/FSE23.pdf">ESEC/FSE'23</a>, <a href=""
-		onclick="show_list('sp5'); return false;">…</a>). These techniques are
-		expected to facilitate automated security analysis, such as bug scanning and
-		fuzz testing. To date, many zero-day vulnerabilities have been discovered
-		through these techniques<a style="color:black" href="/Reverse_Engineering.html"> <i
-		class="fa-solid fa-square-up-right fa-xs"></i></a>, and an ACM SIGPLAN
-		Distinguished Paper Award was received.</p>
+<p style="margin: 0 0 1.5rem 0"><img src="/images/key.png" width="18px" />
+<i>Keywords</i>: path-sensitive and sparse analysis, memory safety analysis,
+taint analysis.</p>
 
-		<p><img src="/images/key.png" width="18px" /> <i>Keywords</i>: network
-		security, network protocols, disassembly, binary similarity.</p>
-	</li>
+<h2 id="toc-network-security-analysis">Network Security Analysis</h2>
 
-	<li style="margin: 0 0 1.5rem 0"><b>Static Analysis for Fuzz Testing</b>
-		<p>Fuzz testing is powerful for revealing security loopholes in software. The
-		research group is interested in leveraging static program analyses,
-		particularly, abstract interpretation, to make a general fuzzer more effective
-		and efficient (<a href="/public_pdfs/SP2020.pdf">SP'20</a>, <a
-		href="/public_pdfs/SP22.pdf">SP'22</a>, <span class="sp4"
-		style="display:none"><a
-		href="https://ieeexplore.ieee.org/abstract/document/10149344">TDSC'23</a>,</span>
-		<a href="" onclick="show_list('sp4'); return false;">…</a>). The group is also
-		interested in applying fuzzers to domain-specific application scenarios,
-		including compilers or interpreters, constraint solvers or theorem provers,
-		network or distributed systems, to name a few (<span class="sp3"
-		style="display:none"><a href="/public_pdfs/TSE2016.pdf">TSE'16</a>, <a
-		href="/public_pdfs/TR2016.pdf">TR'16</a>, <a
-		href="/public_pdfs/ISSTA20-DeepGini.pdf">ISSTA'20</a>, </span><a
-		href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>, <a
-		href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>, <a
-		href="https://dl.acm.org/doi/abs/10.1145/3691620.3695530">ASE'24</a>, <a
-		href="/public_pdfs/ISSTA24.pdf">ISSTA'24</a>, <span class="sp3"
-		style="display:none"><a
-		href="https://dl.acm.org/doi/pdf/10.1145/3647994">TOSEM'24</a>, </span><a
-		href="" onclick="show_list('sp3'); return false;">…</a>). By fuzzing, hundreds
-		of bugs in state-of-the-art constraint solvers<a
-		style="color:black;margin-right:5px" href="https://smtfuzz.github.io/"> <i
-		class="fa-solid fa-square-up-right fa-xs"></i></a>and open-source software<a
-		style="color:black;margin-right:5px"
-		href="https://outstanding-hydrogen-2d1.notion.site/Trophies-aef45e1245a64528bd8ec111b475e03b">
-		<i class="fa-solid fa-square-up-right fa-xs"></i></a>have been discovered. The
-		study received an ACM SIGSOFT Distinguished Paper Award and a Google Research
-		Paper Reward.</p>
+<p>Ensuring network security is vital to safeguarding network systems,
+maintaining privacy, and preventing cyberattacks. On the foundation of
+program-analysis-powered fuzz testing and reverse engineering techniques (<span
+class="sp5" style="display:none"><a href="/public_pdfs/TSE2016.pdf">TSE'16</a>,
+<a href="/public_pdfs/TR2016.pdf">TR'16</a>, <a
+href="/public_pdfs/ISSTA20-DeepGini.pdf">ISSTA'20</a>, </span><a
+href="/public_pdfs/SP2020.pdf">SP'20</a>, <span class="sp5"
+style="display:none"><a href="/public_pdfs/FSE21.pdf">ESEC/FSE'21</a>, <a
+href="/public_pdfs/ISSTA2021.pdf">ISSTA'21</a>,</span> <a
+href="/public_pdfs/SP22.pdf">SP'22</a>, <a
+href="/public_pdfs/SP23DARM.pdf">SP'23</a>, <a
+href="/public_pdfs/FSE23.pdf">ESEC/FSE'23</a>, <span class="sp5"
+style="display:none"><a href="/public_pdfs/ISSTA23.pdf">ISSTA'23</a>, <a
+href="https://ieeexplore.ieee.org/abstract/document/10149344">TDSC'23</a>, <a
+href="https://dl.acm.org/doi/abs/10.1145/3691620.3695530">ASE'24</a>, <a
+href="/public_pdfs/ISSTA24.pdf">ISSTA'24</a>, <a
+href="https://dl.acm.org/doi/pdf/10.1145/3647994">TOSEM'24</a>,</span> <a
+href="" onclick="show_list('sp5'); return false;">…</a>), the research group
+deeply explores the security aspects of diverse network protocols, including but
+not limited to both communication protocols such as TCP and routing protocols
+like OSPF (<a href="/public_pdfs/CCS23.pdf">CCS'23</a>, <a
+href="/public_pdfs/SEC23.pdf">SEC'23</a>, <a
+href="/public_pdfs/OOPSLA2024.pdf">OOPSLA'24</a>, <span class="sp6"
+style="display:none"><a href="/public_pdfs/ISSTA25.pdf">ISSTA'25</a>,</span> <a
+href="/public_pdfs/CCS25.pdf">CCS'25</a>, <a href=""
+onclick="show_list('sp6'); return false;">…</a>). Related techniques from the
+group have detected both general memory safety issues<a style="color:black"
+href="/Reverse_Engineering.html"> <i
+class="fa-solid fa-square-up-right fa-xs"></i></a>, such as memory leaks and
+buffer overruns, and, in particular, silent domain-specific network breaches
+that do not cause apparent symptoms at runtime<a style="color:black"
+href="https://todiff.github.io"> <i
+class="fa-solid fa-square-up-right fa-xs"></i></a>. Two ACM Distinguished Paper
+Awards, as well as a Google Research Paper Award, were received.</p>
 
-		<p><img src="/images/key.png" width="18px" /> <i>Keywords</i>: incremental
-		fuzzing, directed fuzzing, testing large and complex systems.</p>
-	</li>
-</ul>
+<p><img src="/images/key.png" width="18px" /> <i>Keywords</i>: network
+protocols, fuzzing, reverse engineering, automated validation.</p>
 
 <!-- by Texy2! -->      </div>
     </div></div>
     <div id="footer-container">
         <div id="footer">
-             Copyright 2025 Qingkai Shi. Last modified: 2025.06. <br>
+             Copyright 2025 Qingkai Shi. Last modified: 2025.08. <br>
 			 <div id="edit">
              <a href="./?edit=Introduction">Edit page</a> |
              <a href="./cv.php" target="_blank">Edit resume</a> |
