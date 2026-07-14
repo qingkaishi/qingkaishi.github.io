@@ -76,12 +76,12 @@ function complete_load() {
         if (edit) {
             edit.style.display = 'none';
         }
-        //if (footer) {
-        //    let tracker_link = document.getElementById('tracker-link')
-        //    let tracker_image = document.getElementById('tracker-img')
-        //    tracker_link.href = '/#'
-        //    tracker_image.src = '//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=TfFbkfpRwyjBdzsoAodWHlNZG-oAoqBq4U7gUWWVWkQ&co=2d78ad&ct=ffffff'
-        //}
+        if (footer) {
+            let tracker_link = document.getElementById('tracker-link')
+            let tracker_image = document.getElementById('tracker-img')
+            tracker_link.href = '/#'
+            tracker_image.src = 'https://mapmyvisitors.com/map.png?d=qpLqXN20yUOXW5gYk8wE8I_uHwLXF8t2rCAg4uas3Gk&cl=ffffff'
+        }
     }
 
     let main_div = document.getElementById('main')
